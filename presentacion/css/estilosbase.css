@@ -1,0 +1,39 @@
+:root {    
+    /* -------------------------------- variables ------------------------------- */
+    /* --- colores --- */
+    --background-color: #FEEAE6;
+    --texto-principal-color: #442C2E;
+    --links-color: #9F001D;
+
+    /* --- fuentes --- */
+    --texto-principal-fuente: 'Roboto', sans-serif;
+}
+
+/* --------------------------------- GENERAL -------------------------------- */
+* {
+    background-color: var(--background-color);
+    color: var(--texto-principal-color);
+    font-family: var(--texto-principal-fuente);
+}
+
+h2 {
+    font-weight: 700;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: var(--links-color);
+    background: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--background-color);
+}

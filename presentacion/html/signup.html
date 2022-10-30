@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odontologxs</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="icon" href="../img/Tooth Icon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilosbase.css">
+    <link rel="stylesheet" href="../css/signup.css">    
+</head>
+<body>
+    <div class="titulo-container">
+        <h2>Registrate!</h2>
+        <p class="formulario-instruccion">
+            Rellenar para crear un nuevo usuario.
+        </p>
+    </div>
+    <div class="formulario-container">
+        <form action="">
+            <ul class="formulario-items">
+                <li class="formulario-item">
+                <label for="nombre" hidden>Nombre de Usuario</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre de Usuario" autocomplete="on" required>
+                </li>
+                <li class="formulario-item">
+                <label for="tipo" hidden>Tipo de Usuario</label>
+                <select name="tipo" id="tipo">
+                    <option>Usuario normal</option>
+                    <option>Administradorx</option>
+                </select>
+                </li>
+                <li class="formulario-item">
+                <label for="set-password" hidden>Crear contraseña</label>
+                <input type="password" name="set-password" id="set-password" placeholder="Crear contraseña" required>
+                </li>
+                <li class="formulario-item">
+                <label for="confirm-password" hidden>Confirmar contraseña</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirmar contraseña" required>
+                </li>
+                <li class="formulario-item">   
+                    <div class="cntr">
+                        <input type="checkbox" id="cbx" class="hidden-xs-up"name="aceptar-tyc">
+                        <label for="cbx" class="cbx" required><img src="../img/checkbox-cuadrado.png" height="16px" width="16px" alt="Cuadrado para checkear sin tildar."></img> Acepto los <a class="form-link">Términos</a> y <a class="form-link">Condiciones</a>.</label>
+                    </div>
+                </li>
+                <label for="submit" hidden>Registrarse</label>
+                <input type="submit" placeholder="Registrarse" id="submit">
+            </ul>
+        </form>
+    </div>
+    <div class="alternativa-container">
+        <p class="alternativa">
+            ¿Ya tenés una cuenta? <a href="/html/signin.html">Iniciar sesión</a>
+        </p>
+    </div>
+
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
