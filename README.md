@@ -1,4 +1,4 @@
-# [Turnos Odontologia](presentacion/html/index.html)
+# [Ver app](presentacion/html/index.html)
 ### Trabajo Integrador - Back End, CTD.
 
 ## Sistema de reserva de turnos
