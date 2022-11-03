@@ -1,19 +1,13 @@
 package service;
 
 import model.Persona;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
 public class PersonasFacade implements IPersonasFacade{
-    @Override
-    public List<Persona> listaDePersonas(List listaDePersonas) {
-        return null;
-    }
 
-    @Override
-    public Persona agregarPersona() {
-        return null;
-    }
+    private static final Logger logger = Logger.getLogger(PersonasFacade.class);
 
     @Override
     public Persona modificarPersona() {
@@ -21,7 +15,7 @@ public class PersonasFacade implements IPersonasFacade{
     }
 
     @Override
-    public List listarPersonas(List listaDePersonas) {
+    public List listarPersonas() {
         return null;
     }
 

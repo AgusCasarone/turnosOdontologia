@@ -1,5 +1,13 @@
+import org.apache.log4j.Logger;
+import service.AdministrarTurno;
+
 public class Main {
+
+    private static final Logger logger = Logger.getLogger(AdministrarTurno.class);
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        String nombre = "agus";
+        String puntos = "12";
+        logger.info(String.format("el ganador es %s y se lleva %s puntos", nombre, puntos));
     }
 }

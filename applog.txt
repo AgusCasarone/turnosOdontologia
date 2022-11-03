@@ -1,0 +1,7 @@
+INFO    2022-11-03 00:23:14,228 [main] service.AdministrarTurno  - hola, mundo!
+INFO    2022-11-03 00:30:37,475 [main] service.AdministrarTurno  - hola, mundo!
+11-03@00:31:45 INFO  (    Main.java:10)     - hola, mundo!
+INFO    2022-11-03 00:34:03,506 [main] service.AdministrarTurno  - hola, mundo!
+INFO    2022-11-03 00:34:24,811 [main] service.AdministrarTurno  - hola, mundo!
+WARN    2022-11-03 00:36:25,978 [main] service.AdministrarTurno  - hola, mundo!
+INFO    2022-11-03 00:43:09,627 [main] service.AdministrarTurno  - el ganador es agus y se lleva 12 puntos

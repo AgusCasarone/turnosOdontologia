@@ -1,10 +1,8 @@
 package model;
 
-import service.TurnoFlyweightFactory;
-
 import java.util.Date;
 
-public class Turno extends TurnoFlyweightFactory {
+public  class Turno {
 
     private Paciente paciente;
     private Odontologo odontologo;

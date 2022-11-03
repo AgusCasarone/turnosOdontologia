@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Date;
-import java.util.List;
 
 public class Paciente extends Persona {
 
@@ -32,8 +31,8 @@ public class Paciente extends Persona {
         this.fechaAlta = fechaAlta;
     }
 
-    public Paciente(String apellido, String nombre, List listaTurnos, String domicilio, String dni, Date fechaAlta) {
-        super(apellido, nombre, listaTurnos);
+    public Paciente(String apellido, String nombre, String domicilio, String dni, Date fechaAlta) {
+        super(apellido, nombre);
         this.domicilio = domicilio;
         this.dni = dni;
         this.fechaAlta = fechaAlta;

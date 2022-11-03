@@ -1,7 +1,5 @@
 package model;
 
-import java.util.List;
-
 public class Odontologo extends Persona {
 
     private String matricula;
@@ -14,8 +12,8 @@ public class Odontologo extends Persona {
         this.matricula = matricula;
     }
 
-    public Odontologo(String apellido, String nombre, List listaTurnos, String matricula) {
-        super(apellido, nombre, listaTurnos);
+    public Odontologo(String apellido, String nombre, String matricula) {
+        super(apellido, nombre);
         this.matricula = matricula;
     }
 }

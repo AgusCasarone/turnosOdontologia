@@ -1,18 +1,24 @@
 package model;
 
+import model.Turno;
 import service.IPersonasFacade;
+import service.PersonasFacade;
 
 import java.util.List;
 
-public abstract class Persona implements IPersonasFacade {
+public abstract class Persona {
 
     private String apellido, nombre;
-    private List listaTurnos;
+    private List<Turno> listaTurnos;
 
-    public Persona(String apellido, String nombre, List listaTurnos) {
+    public Persona(String apellido, String nombre, List<Turno> listaTurnos) {
+        this(apellido, nombre);
+        this.listaTurnos = listaTurnos;
+    }
+
+    public Persona(String apellido, String nombre) {
         this.apellido = apellido;
         this.nombre = nombre;
-        this.listaTurnos = listaTurnos;
     }
 
     public String getApellido() {
@@ -23,7 +29,7 @@ public abstract class Persona implements IPersonasFacade {
         return nombre;
     }
 
-    public List getListaTurnos() {
+    public List<Turno> getListaTurnos() {
         return listaTurnos;
     }
 
@@ -35,7 +41,7 @@ public abstract class Persona implements IPersonasFacade {
         this.nombre = nombre;
     }
 
-    public void setListaTurnos(List listaTurnos) {
+    public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
 }
