@@ -1,12 +1,12 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public  class Turno {
 
     private Paciente paciente;
     private Odontologo odontologo;
-    private Date fechaYHora;
+    private LocalDateTime fechaYHora;
 
     public Paciente getPaciente() {
         return paciente;
@@ -24,15 +24,15 @@ public  class Turno {
         this.odontologo = odontologo;
     }
 
-    public Date getFechaYHora() {
+    public LocalDateTime getFechaYHora() {
         return fechaYHora;
     }
 
-    public void setFechaYHora(Date fechaYHora) {
+    public void setFechaYHora(LocalDateTime fechaYHora) {
         this.fechaYHora = fechaYHora;
     }
 
-    public Turno(Paciente paciente, Odontologo odontologo, Date fechaYHora) {
+    public Turno(Paciente paciente, Odontologo odontologo, LocalDateTime fechaYHora) {
         this.paciente = paciente;
         this.odontologo = odontologo;
         this.fechaYHora = fechaYHora;

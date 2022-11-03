@@ -1,11 +1,16 @@
 package model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Usuario {
 
     private String user, password;
     private Rol rol;
+
+    public Turno generarTurno(LocalDateTime fechaYHora, Paciente paciente, Odontologo odontologo) {
+        return new Turno(paciente, odontologo, fechaYHora);
+    }
 
     public String getUser() {
         return user;

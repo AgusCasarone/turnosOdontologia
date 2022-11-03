@@ -5,3 +5,57 @@ INFO    2022-11-03 00:34:03,506 [main] service.AdministrarTurno  - hola, mundo!
 INFO    2022-11-03 00:34:24,811 [main] service.AdministrarTurno  - hola, mundo!
 WARN    2022-11-03 00:36:25,978 [main] service.AdministrarTurno  - hola, mundo!
 INFO    2022-11-03 00:43:09,627 [main] service.AdministrarTurno  - el ganador es agus y se lleva 12 puntos
+INFO    2022-11-03 01:26:22,772 [main] model.OdontologoTest  - el odontologo se crea correctamente
+INFO    2022-11-03 02:02:48,628 [main] model.OdontologoTest  - el apellido del odontologo se modifica correctamente
+INFO    2022-11-03 02:02:48,633 [main] model.OdontologoTest  - el odontologo se crea correctamente
+INFO    2022-11-03 02:02:48,633 [main] model.OdontologoTest  - el nombre del odontologo se modifica correctamente
+INFO    2022-11-03 02:02:48,634 [main] model.OdontologoTest  - la matricula del odontologo se modifica correctamente
+INFO    2022-11-03 02:13:11,082 [main] model.OdontologoTest  - se testeó el setter el Odontologo.setNombre()
+INFO    2022-11-03 02:13:11,090 [main] model.OdontologoTest  - se testeó el constructor de Odontologo
+INFO    2022-11-03 02:13:11,094 [main] model.OdontologoTest  - se testeó el setter el Odontologo.setApellido()
+INFO    2022-11-03 02:13:11,104 [main] model.OdontologoTest  - se testeó el setter el Odontologo.setMatricula()
+INFO    2022-11-03 02:52:02,561 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 02:52:02,569 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 02:52:02,570 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 02:52:02,573 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 02:52:02,583 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 02:53:26,617 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 02:53:26,621 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 02:53:26,623 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 02:53:26,626 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 02:53:26,630 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 02:53:26,631 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 02:55:02,525 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 02:55:02,531 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 02:55:02,531 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 02:55:02,532 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 02:55:02,533 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 02:55:02,534 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 02:55:57,286 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 02:55:57,290 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 02:55:57,291 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 02:55:57,292 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 02:55:57,296 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 02:55:57,299 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 04:02:32,801 [main] model.PacienteTest  - test de Turno.setPaciente()
+INFO    2022-11-03 04:02:32,803 [main] model.PacienteTest  - test de Turno.setFechaYHora()
+INFO    2022-11-03 04:02:32,804 [main] model.PacienteTest  - test de Turno.setOdontologo()
+INFO    2022-11-03 04:02:32,805 [main] model.PacienteTest  - test del constructor del turno
+INFO    2022-11-03 04:07:00,926 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 04:07:00,934 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 04:07:00,935 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 04:07:00,938 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 04:07:00,940 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 04:07:00,941 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 04:07:18,209 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 04:07:18,220 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 04:07:18,225 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 04:07:18,228 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 04:07:18,232 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 04:07:18,233 [main] model.PacienteTest  - test de Paciente.setDni
+INFO    2022-11-03 04:07:44,729 [main] model.PacienteTest  - test de Paciente.setNombre
+INFO    2022-11-03 04:07:44,735 [main] model.PacienteTest  - test de Paciente.setDomicilio
+INFO    2022-11-03 04:07:44,739 [main] model.PacienteTest  - test de Paciente.setApellido
+INFO    2022-11-03 04:07:44,743 [main] model.PacienteTest  - test del constructor del paciente
+INFO    2022-11-03 04:08:43,568 [main] model.PacienteTest  - test de Paciente.setFechaDeAlta
+INFO    2022-11-03 04:08:45,228 [main] model.PacienteTest  - test de Paciente.setDni

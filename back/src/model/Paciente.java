@@ -1,37 +1,39 @@
 package model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Paciente extends Persona {
 
-    private String domicilio, dni;
-    private Date fechaAlta;
+    LocalDate fechaAlta;
 
-    public String getDomicilio() {
+    private Domicilio domicilio;
+    private int dni;
+
+    public Domicilio getDomicilio() {
         return domicilio;
     }
 
-    public void setDomicilio(String domicilio) {
+    public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
-    public Date getFechaAlta() {
+    public LocalDate getFechaAlta() {
         return fechaAlta;
     }
 
-    public void setFechaAlta(Date fechaAlta) {
+    public void setFechaAlta(LocalDate fechaAlta) {
         this.fechaAlta = fechaAlta;
     }
 
-    public Paciente(String apellido, String nombre, String domicilio, String dni, Date fechaAlta) {
+    public Paciente(String apellido, String nombre, Domicilio domicilio, int dni, LocalDate fechaAlta) {
         super(apellido, nombre);
         this.domicilio = domicilio;
         this.dni = dni;
