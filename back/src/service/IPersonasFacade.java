@@ -12,6 +12,6 @@ public interface IPersonasFacade {
 
     Persona modificarPersona(Usuario usuario);
 
-    List listarPersonas(Usuario usuario);
+    List<Persona> listarPersonas(Usuario usuario);
     Boolean eliminarPersona(Usuario usuario);
 }

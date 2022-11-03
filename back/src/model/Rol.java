@@ -1,7 +1,11 @@
 package model;
 
 public class Rol {
-    String nombre;
+    private String nombre;
+
+    public Rol(String nombre) {
+        this.nombre = nombre;
+    }
 
     public String getNombre() {
         return nombre;
