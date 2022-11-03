@@ -7,8 +7,6 @@ import org.junit.Test;
 
 public class OdontologoTest {
 
-    private static final Logger logger = Logger.getLogger(OdontologoTest.class);
-
     @Test
     public void deberiaPasarConNombreApellidoMatricula() {
 
@@ -25,7 +23,6 @@ public class OdontologoTest {
         Assert.assertEquals(apellido, odontologo.getApellido());
         Assert.assertEquals(matricula, odontologo.getMatricula());
 
-        logger.info(String.format("se testeó el constructor de Odontologo"));
     }
 
     @Test
@@ -44,7 +41,6 @@ public class OdontologoTest {
         Assert.assertNotSame(apellido, odontologo.getApellido());
         Assert.assertEquals(matricula, odontologo.getMatricula());
 
-        logger.info(String.format("se testeó el setter el Odontologo.setApellido()"));
     }
 
     @Test
@@ -63,7 +59,6 @@ public class OdontologoTest {
         Assert.assertEquals(apellido, odontologo.getApellido());
         Assert.assertNotSame(matricula, odontologo.getMatricula());
 
-        logger.info(String.format("se testeó el setter el Odontologo.setMatricula()"));
     }
 
     @Test
@@ -82,7 +77,6 @@ public class OdontologoTest {
         Assert.assertEquals(apellido, odontologo.getApellido());
         Assert.assertEquals(matricula, odontologo.getMatricula());
 
-        logger.info(String.format("se testeó el setter el Odontologo.setNombre()"));
     }
 }
 

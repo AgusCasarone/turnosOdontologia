@@ -7,6 +7,7 @@ public class Usuario {
 
     private String user, password;
     private Rol rol;
+    private int id;
 
     public Turno generarTurno(LocalDateTime fechaYHora, Paciente paciente, Odontologo odontologo) {
         return new Turno(paciente, odontologo, fechaYHora);
@@ -36,9 +37,13 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public Usuario(String user, String password, Rol rol, Turno turno) {
+    public Usuario(String user, String password, Rol rol) {
         this.user = user;
         this.password = password;
         this.rol = rol;
+    }
+
+    public int getId() {
+        return id;
     }
 }

@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 
 public class TurnoTest {
 
-    private static final Logger logger = Logger.getLogger(PacienteTest.class);
 
     String apellidoPaciente1 = "Apellido1";
     String apellidoPaciente2 = "Apellido2";
@@ -53,7 +52,6 @@ public class TurnoTest {
         Assert.assertEquals(odontologo1, turno1.getOdontologo());
         Assert.assertEquals(fechaYHora1, turno1.getFechaYHora());
 
-        logger.info(String.format("test del constructor del turno"));
     }
 
     @Test
@@ -74,7 +72,6 @@ public class TurnoTest {
         Assert.assertEquals(odontologo1, turno1.getOdontologo());
         Assert.assertEquals(fechaYHora1, turno1.getFechaYHora());
 
-        logger.info(String.format("test de Turno.setPaciente()"));
     }
 
     @Test
@@ -96,7 +93,6 @@ public class TurnoTest {
         Assert.assertNotSame(odontologo1, turno1.getOdontologo());
         Assert.assertEquals(fechaYHora1, turno1.getFechaYHora());
 
-        logger.info(String.format("test de Turno.setOdontologo()"));
     }
 
     @Test
@@ -117,6 +113,5 @@ public class TurnoTest {
         Assert.assertEquals(odontologo1, turno1.getOdontologo());
         Assert.assertNotSame(fechaYHora1, turno1.getFechaYHora());
 
-        logger.info(String.format("test de Turno.setFechaYHora()"));
     }
 }

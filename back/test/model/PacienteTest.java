@@ -8,8 +8,6 @@ import java.time.LocalDate;
 
 public class PacienteTest {
 
-    private static final Logger logger = Logger.getLogger(PacienteTest.class);
-
     @Test
     public void deberiaPasarConNombreApellidoDomicilioDNIFechaDeAlta() {
 
@@ -30,7 +28,6 @@ public class PacienteTest {
         Assert.assertEquals(dni, paciente.getDni());
         Assert.assertEquals(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test del constructor del paciente"));
     }
 
     @Test
@@ -53,7 +50,6 @@ public class PacienteTest {
         Assert.assertEquals(dni, paciente.getDni());
         Assert.assertEquals(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test de Paciente.setNombre"));
     }
 
     @Test
@@ -76,7 +72,6 @@ public class PacienteTest {
         Assert.assertEquals(dni, paciente.getDni());
         Assert.assertEquals(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test de Paciente.setApellido"));
     }
 
 
@@ -102,7 +97,6 @@ public class PacienteTest {
         Assert.assertEquals(dni, paciente.getDni());
         Assert.assertEquals(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test de Paciente.setDomicilio"));
     }
 
     @Test
@@ -125,7 +119,6 @@ public class PacienteTest {
         Assert.assertNotSame(dni, paciente.getDni());
         Assert.assertEquals(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test de Paciente.setDni"));
     }
 
     @Test
@@ -148,7 +141,6 @@ public class PacienteTest {
         Assert.assertEquals(dni, paciente.getDni());
         Assert.assertNotSame(fechaDeAlta, paciente.getFechaAlta());
 
-        logger.info(String.format("test de Paciente.setFechaDeAlta"));
     }
 }
 

@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface IPersonasFacade {
 
-    static final Logger logger = Logger.getLogger(IPersonasFacade.class);
-
     Persona modificarPersona(Usuario usuario);
 
     List<Persona> listarPersonas(Usuario usuario);

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Paciente extends Persona {
 
-    LocalDate fechaAlta;
+    private LocalDate fechaAlta;
 
     private Domicilio domicilio;
     private int dni;

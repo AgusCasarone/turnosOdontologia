@@ -3,6 +3,11 @@ package model;
 public class Odontologo extends Persona {
 
     private String matricula;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
 
     public String getMatricula() {
         return matricula;

@@ -1,8 +1,18 @@
 package model;
 
+import org.apache.log4j.Logger;
+
 public class Domicilio {
+
+
     private String calle, localidad, provincia;
-    private int numero;
+
+
+    public int getId() {
+        return id;
+    }
+
+    private int id, numero;
 
     public String getCalle() {
         return calle;
