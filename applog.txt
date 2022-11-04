@@ -126,3 +126,6 @@ INFO    2022-11-03 17:33:12,307 [main] model.PacienteTest  - test de Turno.setFe
 INFO    2022-11-03 17:33:12,310 [main] model.PacienteTest  - test de Turno.setOdontologo()
 INFO    2022-11-03 17:33:12,313 [main] model.PacienteTest  - test del constructor del turno
 INFO    2022-11-03 18:26:18,788 [main] Main  - el ganador es agus y se lleva 12 puntos
+INFO    2022-11-03 21:22:19,998 [main] service.CrearPersona  - Se creó un odontólogo con el nombre Nombre, el apellido Apellido y la matrícula Matricula por el usuario model.Usuario@f6c48ac.
+INFO    2022-11-03 21:24:15,416 [main] service.CrearPersona  - Se creó un odontólogo con el nombre Nombre, el apellido Apellido y la matrícula Matricula por el usuario model.Usuario@5c5a1b69.
+INFO    2022-11-03 21:41:42,601 [main] service.CrearPersona  - Se creó un odontólogo con el nombre Nombre, el apellido Apellido y la matrícula Matricula por el usuario model.Usuario@7b49cea0.
