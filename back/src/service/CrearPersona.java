@@ -4,7 +4,6 @@ import model.*;
 import org.apache.log4j.Logger;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public abstract class CrearPersona implements IUsuarioFacade{
 

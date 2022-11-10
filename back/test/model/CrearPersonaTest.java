@@ -2,7 +2,6 @@ package model;
 
 import junit.framework.Assert;
 import org.junit.Test;
-import service.CrearPersona;
 
 public class CrearPersonaTest {
 

@@ -1,16 +1,11 @@
 package dao.impl;
 
 import dao.IDao;
-import model.Domicilio;
 import model.Usuario;
 
 import java.sql.*;
 
 public class UsuarioDAOH2 implements IDao<Usuario> {
-    @Override
-    public Domicilio guardar(Domicilio domicilio) {
-        return null;
-    }
 
     @Override
     public Usuario guardar(Usuario usuario) {

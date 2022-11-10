@@ -47,12 +47,8 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
     }
 
     @Override
-    public Usuario guardar(Usuario t) {
+    public Domicilio buscar(int id) {
         return null;
     }
 
-    @Override
-    public Usuario buscar(int id) {
-        return null;
-    }
 }

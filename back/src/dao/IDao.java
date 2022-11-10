@@ -1,15 +1,11 @@
 package dao;
 
-
-import model.Domicilio;
-import model.Usuario;
-
 public interface IDao<T> {
 
-    Domicilio guardar(Domicilio domicilio);
+    T guardar(T t);
 
-    public Usuario guardar(Usuario t);
+    public T guardar(T t);
 
-    public Usuario buscar(int id);
+    public T buscar(int id);
 
 }

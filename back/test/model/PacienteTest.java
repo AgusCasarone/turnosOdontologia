@@ -2,7 +2,6 @@ package model;
 
 
 import junit.framework.Assert;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 import java.time.LocalDate;
 

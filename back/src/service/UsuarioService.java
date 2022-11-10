@@ -8,9 +8,9 @@ import org.apache.log4j.Logger;
 public class UsuarioService {
 
     private static final Logger LOGGER = Logger.getLogger(UsuarioService.class);
-    private IDao<UsuarioService> usuarioDAO;
+    private IDao<Usuario> usuarioDAO;
 
-    public UsuarioService(IDao<UsuarioService> usuarioDAO) {
+    public UsuarioService(IDao<Usuario> usuarioDAO) {
         this.usuarioDAO = usuarioDAO;
     }
 
