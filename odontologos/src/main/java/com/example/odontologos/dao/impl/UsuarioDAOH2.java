@@ -1,9 +1,10 @@
-package dao.impl;
+package com.example.odontologos.dao.impl;
 
-import dao.IDao;
-import model.Usuario;
+import com.example.odontologos.dao.IDao;
+import com.example.odontologos.model.Usuario;
 
 import java.sql.*;
+import java.util.List;
 
 public class UsuarioDAOH2 implements IDao<Usuario> {
 
@@ -42,45 +43,8 @@ public class UsuarioDAOH2 implements IDao<Usuario> {
     }
 
     @Override
-    public Usuario buscar(int id) {
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        Usuario usuario = null;
-        try {
-            Class.forName("org.h2.Driver");
-
-            connection = DriverManager.getConnection("jdbc:h2:~/test4;PASSWORD=sa;USER=sa;INIT=RUNSCRIPT FROM 'table.sql' ");
-
-            preparedStatement = connection.prepareStatement("SELECT id , user , password , idRol FROM USUARIOS " +
-                    "WHERE ID = ?");
-
-            preparedStatement.setInt(1, id);
-
-            ResultSet result = preparedStatement.executeQuery();
-
-            while (result.next()) {
-                int idUsu = result.getInt("id");
-                String user = result.getString("user");
-                String password = result.getString("password");
-                int idRol = result.getInt("idRol");
-
-
-                /* ESTO NO FUNCA PORQUE NO SE ME OCURRE CÓMO RESOLVER EL TIPO DE USUARIO
-                usuario = new Usuario(user, password, idRol);
-                 */
-
-            }
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
+    public List<Usuario> listar() {
         return null;
     }
+
 }

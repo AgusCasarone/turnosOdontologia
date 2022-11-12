@@ -1,4 +1,4 @@
-package model;
+package com.example.odontologos.model;
 
 import java.time.LocalDateTime;
 

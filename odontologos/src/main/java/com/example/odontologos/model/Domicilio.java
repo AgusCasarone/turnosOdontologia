@@ -1,4 +1,4 @@
-package model;
+package com.example.odontologos.model;
 
 public class Domicilio {
 
@@ -49,5 +49,16 @@ public class Domicilio {
         this.localidad = localidad;
         this.provincia = provincia;
         this.numero = numero;
+    }
+
+    @Override
+    public String toString() {
+        return "Domicilio{" +
+                "calle='" + calle + '\'' +
+                ", localidad='" + localidad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", id=" + id +
+                ", numero=" + numero +
+                '}';
     }
 }

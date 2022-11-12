@@ -1,13 +1,14 @@
-package model;
+package com.example.odontologos.model;
 
 import java.util.List;
 
 public abstract class Persona {
 
-    private String apellido, nombre;
-    private List<Turno> listaTurnos;
+    protected String apellido;
+    protected String nombre;
+    protected List<model.Turno> listaTurnos;
 
-    public Persona(String apellido, String nombre, List<Turno> listaTurnos) {
+    public Persona(String apellido, String nombre, List<model.Turno> listaTurnos) {
         this(apellido, nombre);
         this.listaTurnos = listaTurnos;
     }
@@ -25,7 +26,7 @@ public abstract class Persona {
         return nombre;
     }
 
-    public List<Turno> getListaTurnos() {
+    public List<model.Turno> getListaTurnos() {
         return listaTurnos;
     }
 
@@ -37,7 +38,7 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-    public void setListaTurnos(List<Turno> listaTurnos) {
+    public void setListaTurnos(List<model.Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
 }

@@ -1,11 +1,12 @@
-package dao;
+package com.example.odontologos.dao;
+
+
+import java.util.List;
 
 public interface IDao<T> {
 
-    T guardar(T t);
-
     public T guardar(T t);
 
-    public T buscar(int id);
+    public List<T> listar();
 
 }

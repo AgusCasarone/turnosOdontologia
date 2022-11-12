@@ -1,7 +1,8 @@
-package service;
+package com.example.odontologos.service;
 
-import model.Persona;
-import model.Usuario;
+
+import com.example.odontologos.model.Persona;
+import com.example.odontologos.model.Usuario;
 
 import java.util.List;
 

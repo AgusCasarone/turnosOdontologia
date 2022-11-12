@@ -1,26 +1,30 @@
-package dao.impl;
+package com.example.odontologos.dao.impl;
 
-import dao.IDao;
-import model.Domicilio;
-import model.Usuario;
+import com.example.odontologos.Util.DataBaseUtil;
+import com.example.odontologos.dao.IDao;
+import com.example.odontologos.model.Domicilio;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class DomicilioDAOH2 implements IDao<Domicilio> {
+
+
+    private PreparedStatement preparedStatement;
+    private Connection connection;
+
+    public DomicilioDAOH2() {
+        preparedStatement = null;
+        connection = null;
+    }
+
     @Override
     public Domicilio guardar(Domicilio domicilio) {
 
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
         try {
-            Class.forName("org.h2.Driver");
-
-            connection = DriverManager.getConnection("jdbc:h2:~/test4;PASSWORD=sa;USER=sa;INIT=RUNSCRIPT FROM 'table.sql' ");
-
+            connection = DataBaseUtil.connection();
             preparedStatement = connection.prepareStatement("INSERT INTO DOMICILIOS (ID " +
                     ", idProvincia , idLocalidad , idCalle , numero) VALUES (?,?,?,?,?) ");
 
@@ -37,6 +41,7 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
             throw new RuntimeException(e);
         } finally {
             try {
+                assert connection != null;
                 connection.close();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -47,7 +52,7 @@ public class DomicilioDAOH2 implements IDao<Domicilio> {
     }
 
     @Override
-    public Domicilio buscar(int id) {
+    public List<Domicilio> listar() {
         return null;
     }
 

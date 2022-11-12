@@ -1,7 +1,8 @@
-package model;
+package com.example.odontologos.model;
 
-import org.apache.log4j.Logger;
-import service.CrearPersona;
+import com.example.odontologos.service.CrearPersona;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,7 +13,7 @@ public class Usuario {
     private Rol rol;
     private int id;
 
-    private static final Logger logger = Logger.getLogger(CrearPersona.class);
+    private static final Logger logger = LogManager.getLogger(CrearPersona.class);
 
     public Odontologo crearOdontologo(String nombre, String apellido, String matricula, Usuario usuario) {
         if(usuario.getRol().getNombre().equals("admin")) {

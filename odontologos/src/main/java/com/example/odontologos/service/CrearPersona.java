@@ -1,13 +1,18 @@
-package service;
+package com.example.odontologos.service;
 
-import model.*;
-import org.apache.log4j.Logger;
+
+import com.example.odontologos.model.Domicilio;
+import com.example.odontologos.model.Odontologo;
+import com.example.odontologos.model.Paciente;
+import com.example.odontologos.model.Usuario;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
 
 public abstract class CrearPersona implements IUsuarioFacade{
 
-    private static final Logger logger = Logger.getLogger(CrearPersona.class);
+    private static final Logger logger = LogManager.getLogger(CrearPersona.class);
 
     public Odontologo crearOdontologo(String nombre, String apellido, String matricula, Usuario usuario) {
         if(usuario.getRol().getNombre().equals("admin")) {
