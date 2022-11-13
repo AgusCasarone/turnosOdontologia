@@ -1,5 +1,6 @@
 package com.example.odontologos.Util;
 
+import com.example.odontologos.service.CrearPersona;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,8 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBaseUtil {
-
-    public static final Logger logger = LogManager.getLogger(DataBaseUtil.class);
+    private static final Logger logger = LogManager.getLogger(CrearPersona.class);
 
     private final static String DB_JDBC_DRIVER = "org.h2.Driver";
 
@@ -23,8 +23,8 @@ public class DataBaseUtil {
     public static Connection connection() throws SQLException, ClassNotFoundException
     {
         Class.forName(DB_JDBC_DRIVER);
+        logger.info(String.format("Conección a la base de datos exitosa"));
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-
     }
 
 

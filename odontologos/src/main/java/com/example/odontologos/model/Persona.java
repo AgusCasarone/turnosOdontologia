@@ -6,9 +6,9 @@ public abstract class Persona {
 
     protected String apellido;
     protected String nombre;
-    protected List<model.Turno> listaTurnos;
+    protected List<Turno> listaTurnos;
 
-    public Persona(String apellido, String nombre, List<model.Turno> listaTurnos) {
+    public Persona(String apellido, String nombre, List<Turno> listaTurnos) {
         this(apellido, nombre);
         this.listaTurnos = listaTurnos;
     }
@@ -26,7 +26,7 @@ public abstract class Persona {
         return nombre;
     }
 
-    public List<model.Turno> getListaTurnos() {
+    public List<Turno> getListaTurnos() {
         return listaTurnos;
     }
 
@@ -38,7 +38,7 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-    public void setListaTurnos(List<model.Turno> listaTurnos) {
+    public void setListaTurnos(List<Turno> listaTurnos) {
         this.listaTurnos = listaTurnos;
     }
 }

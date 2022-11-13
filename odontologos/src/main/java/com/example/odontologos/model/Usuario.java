@@ -15,10 +15,10 @@ public class Usuario {
 
     private static final Logger logger = LogManager.getLogger(CrearPersona.class);
 
-    public Odontologo crearOdontologo(String nombre, String apellido, String matricula, Usuario usuario) {
+    public Odontologo crearOdontologo(int id, String nombre, String apellido, int matricula, Usuario usuario) {
         if(usuario.getRol().getNombre().equals("admin")) {
             logger.info(String.format("Se creó un odontólogo con el nombre %s, el apellido %s y la matrícula %s por el usuario %s.", nombre, apellido, matricula, usuario));
-            return new Odontologo(apellido, nombre, matricula);
+            return new Odontologo(id, matricula, nombre, apellido);
         }
         logger.info(String.format("No se pudo crear el odontólogo porque el usuario %s no tiene acceso.", usuario));
         return null;

@@ -1,6 +1,6 @@
 package com.example.odontologos.model;
 
-public class Odontologo extends model.Persona {
+public class Odontologo extends Persona {
 
     private int id, matricula;
 

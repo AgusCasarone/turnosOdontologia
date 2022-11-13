@@ -1,6 +1,7 @@
 package com.example.odontologos.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Paciente extends Persona {
 
@@ -9,18 +10,15 @@ public class Paciente extends Persona {
     private Domicilio domicilio;
     private int dni;
 
-    public Paciente(String apellido, String nombre, Domicilio domicilio, String fechaDeAlta) {
+    public Paciente(String apellido, String nombre, Domicilio domicilio, int dni, LocalDate fechaAlta) {
         super(apellido, nombre);
-
         this.fechaAlta = fechaAlta;
         this.domicilio = domicilio;
         this.dni = dni;
     }
 
-    public Paciente(String apellido, String nombre, LocalDate fechaAlta, Domicilio domicilio, int dni) {
+    public Paciente(String apellido, String nombre, int dni) {
         super(apellido, nombre);
-        this.fechaAlta = fechaAlta;
-        this.domicilio = domicilio;
         this.dni = dni;
     }
 

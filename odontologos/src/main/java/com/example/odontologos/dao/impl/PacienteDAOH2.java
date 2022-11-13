@@ -2,7 +2,6 @@ package com.example.odontologos.dao.impl;
 
 import com.example.odontologos.Util.DataBaseUtil;
 import com.example.odontologos.dao.IDao;
-import com.example.odontologos.model.Domicilio;
 import com.example.odontologos.model.Paciente;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
 
         try {
             connection = DataBaseUtil.connection();
-            preparedStatement = connection.prepareStatement("SELECT ID , DNI , NOMBRE , APELLIDO, DOMICILIO, FECHADEALTA FROM PACIENTES");
+            preparedStatement = connection.prepareStatement("SELECT ID , DNI , NOMBRE , APELLIDO FROM PACIENTES");
 
             ResultSet result = preparedStatement.executeQuery();
 
@@ -75,9 +75,7 @@ public class PacienteDAOH2 implements IDao<Paciente> {
                 int dni = result.getInt("DNI");
                 String nombre = result.getString("nombre");
                 String apellido = result.getString("apellido");
-                String domicilio = result.getString("domicilio");
-                String fechaDeAlta = result.getString("fechaDeAlta");
-                pacientes.add(new Paciente(apellido, nombre, domicilio, fechaDeAlta));
+                pacientes.add(new Paciente(apellido, nombre, dni));
             }
 
         } catch (Exception e) {
