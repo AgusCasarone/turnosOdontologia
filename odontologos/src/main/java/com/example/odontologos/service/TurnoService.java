@@ -3,14 +3,15 @@ package com.example.odontologos.service;
 import com.example.odontologos.model.Turno;
 import com.example.odontologos.repository.IDao;
 import com.example.odontologos.repository.impl.TurnoRepository;
-import com.mashape.unirest.http.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class TurnoService {
 
-    private ObjectMapper mapper;
+    @Autowired
     private IDao<Turno> turnoRepository;
 
     public void TurnosService(TurnoRepository turnoRepository) {
@@ -22,19 +23,18 @@ public class TurnoService {
     }
 
     public List<Turno> listar() {
-
-        List<Turno> turnos = turnoRepository.listar();
-        List<TurnoRepository> turnoRepositories = new ArrayList<TurnoRepository>();
-
-        for (Turno turno :
-            turnos ) {
-            TurnoRepository tu
-        }
-
         return turnoRepository.listar();
     }
 
     public Turno buscar(Integer id) {
         return turnoRepository.buscar(id);
+    }
+
+    public boolean eliminar(int id) {
+        return turnoRepository.eliminar(id);
+    }
+
+    public Turno actualizar(Turno turno){
+        return turnoRepository.actualizar(turno);
     }
 }

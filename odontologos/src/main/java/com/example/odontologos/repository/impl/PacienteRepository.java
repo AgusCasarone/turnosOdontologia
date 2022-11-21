@@ -19,6 +19,9 @@ public class PacienteRepository implements IDao<Paciente> {
     private PreparedStatement preparedStatement;
     private Connection connection;
 
+    public void elLucasSeLaCome() {
+    }
+
     @Override
     public Paciente crear(Paciente paciente) {
 
@@ -62,7 +65,7 @@ public class PacienteRepository implements IDao<Paciente> {
         try {
             Class.forName("org.h2.Driver");
 
-            connection = DriverManager.getConnection("jdbc:h2:~/test;PASSWORD=sa;USER=sa;INIT=RUNSCRIPT FROM 'create.sql' ");
+            connection = DataBaseUtil.connection();
             preparedStatement = connection.prepareStatement("SELECT nombre , apellido ," +
                     "                    \"domicilio, dni, fecha_de_alta FROM PACIENTES where id = ?");
             preparedStatement.setInt(1, id);

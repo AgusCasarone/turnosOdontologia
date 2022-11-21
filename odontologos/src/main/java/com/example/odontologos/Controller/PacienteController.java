@@ -2,7 +2,6 @@ package com.example.odontologos.Controller;
 
 import com.example.odontologos.model.Paciente;
 import com.example.odontologos.repository.impl.DomicilioRepository;
-import com.example.odontologos.repository.impl.PacienteRepository;
 import com.example.odontologos.service.OdontologoService;
 import com.example.odontologos.service.PacienteService;
 import com.example.odontologos.service.TurnoService;
@@ -31,7 +30,7 @@ public class PacienteController {
     private OdontologoService odontologoService;
 
     @GetMapping
-    public List<PacienteRepository> listar() {
+    public List<Paciente> listar() {
         return pacienteService.listar();
     }
 
@@ -57,11 +56,11 @@ public class PacienteController {
 
     @PutMapping
     public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente){
-        return ResponseEntity.ok(pacienteService.actualizar(paciente);
+        return ResponseEntity.ok(pacienteService.actualizar(paciente));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscar(@PathVariable int id){
-        return ResponseEntity.ok(pacienteService.buscar(id);
+        return ResponseEntity.ok(pacienteService.buscar(id));
     }
 }

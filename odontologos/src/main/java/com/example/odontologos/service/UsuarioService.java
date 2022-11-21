@@ -6,10 +6,15 @@ import com.example.odontologos.model.Rol;
 import com.example.odontologos.model.Usuario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UsuarioService {
 
     private static final Logger LOGGER = LogManager.getLogger(UsuarioService.class);
+
+    @Autowired
     private final IDao<Usuario> usuarioDAO;
 
     public UsuarioService(IDao<Usuario> usuarioDAO) {

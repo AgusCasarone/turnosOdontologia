@@ -27,18 +27,18 @@ public class TurnoController {
     private OdontologoService odontologoService;
 
     @PostMapping
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) {
+    public ResponseEntity<Turno> crear(@RequestBody Turno turno) {
 
-        Turno turnoGuardado = null;
         ResponseEntity<Turno> response;
-        if (pacienteService.buscar(turno.getPaciente()) == null || odontologoService.buscar(turno.getOdontologo_fk()) == null) {
+        if (pacienteService.buscar(turno.getPaciente().getId()) == null || odontologoService.buscar(turno.getOdontologo().getId()) == null) {
             LOGGER.error("El odontólogo o el paciente no existen y no se pudo crear el turno.");
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         } else {
             LOGGER.info("Turno registrado con éxito. " +
-                    "\n FECHA Y HORA: %s" +
+                    "\n FECHA: %s" +
+                    "\n HORA: %s" +
                     "\n ID ODONTÓLOGO: %s" +
-                    "\n ID PACIENTE: %s." + turno.getFechaYHora() + turno.getOdontologo_fk() + turno.getPaciente());
+                    "\n ID PACIENTE: %s." + turno.getFecha() + turno.getHora() + turno.getOdontologo() + turno.getPaciente());
             response = ResponseEntity.ok(turnoService.guardar(turno));
         }
         return response;
@@ -54,5 +54,26 @@ public class TurnoController {
                 "\n %s" + turnoService.listar());
         return ResponseEntity.ok(turnoService.listar());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Turno> buscar(@PathVariable int id) {
+        return ResponseEntity.ok(turnoService.buscar(id));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity eliminar(@PathVariable int id){
+
+        ResponseEntity response = null;
+
+        if (turnoService.eliminar(id)){
+            response = ResponseEntity.status(HttpStatus.OK).build();
+        } else {
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return response;
+    }
+
+    // actualizar
+
 
 }

@@ -33,10 +33,6 @@ public class Usuario {
         return null;
     }
 
-    public Turno generarTurno(Date fechaYHora, int paciente_fk, int odontologo_fk) {
-        return new Turno(id, paciente_fk, odontologo_fk, fechaYHora);
-    }
-
     public String getUser() {
         return user;
     }
