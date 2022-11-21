@@ -1,33 +1,28 @@
 package com.example.odontologos.model;
 
-import java.time.LocalDate;
-import java.util.List;
+import java.sql.Date;
 
-public class Paciente extends Persona {
+public class Paciente {
 
-    private LocalDate fechaAlta;
+    private int id, dni;
+    private String nombre, apellido, domicilio;
+    private Date fechaDeAlta;
 
-    private Domicilio domicilio;
-    private int dni;
-
-    public Paciente(String apellido, String nombre, Domicilio domicilio, int dni, LocalDate fechaAlta) {
-        super(apellido, nombre);
-        this.fechaAlta = fechaAlta;
-        this.domicilio = domicilio;
+    public Paciente(Integer id, String apellido, String nombre, String domicilio, int dni, Date fechaDeAlta) {
+        this.id = id;
         this.dni = dni;
-    }
-
-    public Paciente(String apellido, String nombre, int dni) {
-        super(apellido, nombre);
-        this.dni = dni;
-    }
-
-    public Domicilio getDomicilio() {
-        return domicilio;
-    }
-
-    public void setDomicilio(Domicilio domicilio) {
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.domicilio = domicilio;
+        this.fechaDeAlta = fechaDeAlta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getDni() {
@@ -38,13 +33,35 @@ public class Paciente extends Persona {
         this.dni = dni;
     }
 
-    public String getFechaAlta() {
-        return fechaAlta.toString();
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFechaAlta(LocalDate fechaAlta) {
-        this.fechaAlta = fechaAlta;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
 
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
+    }
+
+    public java.sql.Date getFechaDeAlta() {
+        return fechaDeAlta;
+    }
+
+    public void setFechaDeAlta(Date fechaDeAlta) {
+        this.fechaDeAlta = fechaDeAlta;
+    }
 }

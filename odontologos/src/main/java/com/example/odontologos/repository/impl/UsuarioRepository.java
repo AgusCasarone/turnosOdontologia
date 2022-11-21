@@ -1,15 +1,17 @@
-package com.example.odontologos.dao.impl;
+package com.example.odontologos.repository.impl;
 
-import com.example.odontologos.dao.IDao;
+import com.example.odontologos.repository.IDao;
 import com.example.odontologos.model.Usuario;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.List;
 
-public class UsuarioDAOH2 implements IDao<Usuario> {
+@Repository
+public class UsuarioRepository implements IDao<Usuario> {
 
     @Override
-    public Usuario guardar(Usuario usuario) {
+    public Usuario crear(Usuario usuario) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
@@ -43,7 +45,23 @@ public class UsuarioDAOH2 implements IDao<Usuario> {
     }
 
     @Override
+    public Usuario buscar(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Boolean eliminar(int id) {
+        return null;
+    }
+
+
+    @Override
     public List<Usuario> listar() {
+        return null;
+    }
+
+    @Override
+    public Usuario actualizar(Usuario usuario) {
         return null;
     }
 

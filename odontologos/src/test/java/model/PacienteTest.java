@@ -1,26 +1,21 @@
-package service;
+package model;
 
 import com.example.odontologos.model.Domicilio;
 import com.example.odontologos.model.Paciente;
-import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 public class PacienteTest {
 
     String apellido = "Apellido";
     String nombre = "Nombre";
-    String calle = "calle";
-    String localidad = "localidad";
-    String provincia = "provincia";
-    int numero = 456;
     int dni = 789;
 
-    LocalDate fecha = LocalDate.of(1996, 05, 01);
-    Domicilio domicilio = new Domicilio(calle, localidad, provincia, numero);
-    Paciente paciente = new Paciente(apellido, nombre, domicilio, dni, fecha);
+    Date fecha = new Date(1996, 05, 01);
+    String domicilio = "Domicilio";
+    Paciente paciente = new Paciente(1, apellido, nombre, domicilio, dni, fecha);
 
 
     @Test
@@ -34,7 +29,7 @@ public class PacienteTest {
         Assertions.assertEquals(apellido, paciente.getApellido());
         Assertions.assertEquals(domicilio, paciente.getDomicilio());
         Assertions.assertEquals(dni, paciente.getDni());
-        Assertions.assertEquals(fecha, paciente.getFechaAlta());
+        Assertions.assertEquals(fecha, paciente.getFechaDeAlta());
     }
 
     @Test
@@ -49,7 +44,7 @@ public class PacienteTest {
         Assertions.assertEquals(apellido, paciente.getApellido());
         Assertions.assertEquals(domicilio, paciente.getDomicilio());
         Assertions.assertEquals(dni, paciente.getDni());
-        Assertions.assertEquals(fecha, paciente.getFechaAlta());
+        Assertions.assertEquals(fecha, paciente.getFechaDeAlta());
     }
 
     @Test
@@ -64,7 +59,7 @@ public class PacienteTest {
         Assertions.assertNotSame(apellido, paciente.getApellido());
         Assertions.assertEquals(domicilio, paciente.getDomicilio());
         Assertions.assertEquals(dni, paciente.getDni());
-        Assertions.assertEquals(fecha, paciente.getFechaAlta());
+        Assertions.assertEquals(fecha, paciente.getFechaDeAlta());
     }
 
 
@@ -72,7 +67,7 @@ public class PacienteTest {
     public void deberiaCambiarElDomicilio() {
         //Arrange
 
-        Domicilio otroDomicilio = new Domicilio("Otro", "Domicilio", "Inventado", 2);
+        String otroDomicilio = new Domicilio(1, "Otro", "Domicilio", "Inventado", 2);
 
         //Act
         paciente.setDomicilio(otroDomicilio);
@@ -82,7 +77,7 @@ public class PacienteTest {
         Assertions.assertEquals(apellido, paciente.getApellido());
         Assertions.assertNotSame(domicilio, paciente.getDomicilio());
         Assertions.assertEquals(dni, paciente.getDni());
-        Assertions.assertEquals(fecha, paciente.getFechaAlta());
+        Assertions.assertEquals(fecha, paciente.getFechaDeAlta());
     }
 
     @Test
@@ -97,7 +92,7 @@ public class PacienteTest {
         Assertions.assertEquals(apellido, paciente.getApellido());
         Assertions.assertEquals(domicilio, paciente.getDomicilio());
         Assertions.assertNotSame(dni, paciente.getDni());
-        Assertions.assertEquals(fecha, paciente.getFechaAlta());
+        Assertions.assertEquals(fecha, paciente.getFechaDeAlta());
     }
 
     @Test
@@ -105,13 +100,13 @@ public class PacienteTest {
         //Arrange
 
         //Act
-        paciente.setFechaAlta(LocalDate.of(2022,5, 1));
+        paciente.setFechaDeAlta(new Date(2022,5, 1));
 
         //Assert
         Assertions.assertEquals(nombre, paciente.getNombre());
         Assertions.assertEquals(apellido, paciente.getApellido());
         Assertions.assertEquals(domicilio, paciente.getDomicilio());
         Assertions.assertEquals(dni, paciente.getDni());
-        Assertions.assertNotSame(fecha, paciente.getFechaAlta());
+        Assertions.assertNotSame(fecha, paciente.getFechaDeAlta());
     }
 }

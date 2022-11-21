@@ -1,7 +1,7 @@
 package com.example.odontologos.service;
 
 
-import com.example.odontologos.dao.IDao;
+import com.example.odontologos.repository.IDao;
 import com.example.odontologos.model.Rol;
 import com.example.odontologos.model.Usuario;
 import org.apache.logging.log4j.LogManager;
@@ -18,7 +18,7 @@ public class UsuarioService {
 
     public Usuario crearUsuario(Usuario usuario) {
         LOGGER.debug("Crear usuario:" + usuario.getUser());
-        return usuarioDAO.guardar(usuario);
+        return usuarioDAO.crear(usuario);
     }
 
     public Usuario actualizarUsuario(String user, String password, Rol rol) {

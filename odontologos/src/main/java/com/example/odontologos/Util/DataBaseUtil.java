@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBaseUtil {
-    private static final Logger logger = LogManager.getLogger(CrearPersona.class);
+    private static final Logger logger = LogManager.getLogger(DataBaseUtil.class);
 
     private final static String DB_JDBC_DRIVER = "org.h2.Driver";
 
@@ -23,7 +23,7 @@ public class DataBaseUtil {
     public static Connection connection() throws SQLException, ClassNotFoundException
     {
         Class.forName(DB_JDBC_DRIVER);
-        logger.info(String.format("Conección a la base de datos exitosa"));
+        logger.info("Conección a la base de datos exitosa");
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 

@@ -4,8 +4,7 @@ import com.example.odontologos.service.CrearPersona;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 public class Usuario {
 
@@ -25,17 +24,17 @@ public class Usuario {
 
     }
 
-    public Paciente crearPaciente(String nombre, String apellido, Domicilio domicilio, LocalDate fechaAlta, int dni, Usuario usuario) {
+    public Paciente crearPaciente(String nombre, String apellido, String domicilio, Date fechaAlta, int dni, Usuario usuario) {
         if(usuario.getRol().getNombre().equals("admin")) {
             logger.info(String.format("Se creó un paciente con el nombre %s, el apellido %s, la fecha de alta %s y el DNI %s por el usuario %s", nombre, apellido, fechaAlta, dni, usuario));
-            return new Paciente(apellido, nombre, domicilio, dni, fechaAlta);
+            return new Paciente(1, apellido, nombre, domicilio, dni, fechaAlta);
         }
         logger.info(String.format("No se pudo crear el odontólogo porque el usuario %s no tiene acceso.", usuario));
         return null;
     }
 
-    public Turno generarTurno(LocalDateTime fechaYHora, Paciente paciente, Odontologo odontologo) {
-        return new Turno(paciente, odontologo, fechaYHora);
+    public Turno generarTurno(Date fechaYHora, int paciente_fk, int odontologo_fk) {
+        return new Turno(id, paciente_fk, odontologo_fk, fechaYHora);
     }
 
     public String getUser() {

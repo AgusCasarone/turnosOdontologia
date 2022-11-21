@@ -1,12 +1,31 @@
 package com.example.odontologos.model;
 
-import java.time.LocalDateTime;
+import java.sql.Date;
+import java.sql.Time;
 
 public  class Turno {
 
+    private int id;
     private Paciente paciente;
     private Odontologo odontologo;
-    private LocalDateTime fechaYHora;
+    private Date fecha;
+    private Time hora;
+
+    public Turno(int id, Paciente paciente, Odontologo odontologo, Date fecha, Time hora) {
+        this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Paciente getPaciente() {
         return paciente;
@@ -24,17 +43,19 @@ public  class Turno {
         this.odontologo = odontologo;
     }
 
-    public LocalDateTime getFechaYHora() {
-        return fechaYHora;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setFechaYHora(LocalDateTime fechaYHora) {
-        this.fechaYHora = fechaYHora;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    public Turno(Paciente paciente, Odontologo odontologo, LocalDateTime fechaYHora) {
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fechaYHora = fechaYHora;
+    public Time getHora() {
+        return hora;
+    }
+
+    public void setHora(Time hora) {
+        this.hora = hora;
     }
 }

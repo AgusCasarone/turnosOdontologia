@@ -1,7 +1,6 @@
-package service;
+package model;
 
 import com.example.odontologos.model.Odontologo;
-import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 

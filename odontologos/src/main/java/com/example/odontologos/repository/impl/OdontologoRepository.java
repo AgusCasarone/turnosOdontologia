@@ -1,37 +1,35 @@
-package com.example.odontologos.dao.impl;
+package com.example.odontologos.repository.impl;
 
 import com.example.odontologos.Util.DataBaseUtil;
-import com.example.odontologos.dao.IDao;
+import com.example.odontologos.repository.IDao;
 import com.example.odontologos.model.Odontologo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OdontologoDAOH2 implements IDao<Odontologo> {
-    private static final Logger LOGGER = LogManager.getLogger(OdontologoDAOH2.class);
+@Repository
+public class OdontologoRepository implements IDao<Odontologo> {
+    private static final Logger LOGGER = LogManager.getLogger(OdontologoRepository.class);
 
     private PreparedStatement preparedStatement;
     private Connection connection;
 
-    public OdontologoDAOH2() {
-        preparedStatement = null;
-        connection = null;
-    }
-
     @Override
-    public Odontologo guardar(Odontologo odontologo) {
+    public Odontologo crear(Odontologo odontologo) {
 
         try {
             connection = DataBaseUtil.connection();
-            preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (matricula " +
-                    ", nombre , apellido ) VALUES (?,?,?)  ");
+            preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (ID, matricula " +
+                    ", nombre , apellido ) VALUES (?, ?,?,?)  ");
 
-            preparedStatement.setInt(1, odontologo.getMatricula());
-            preparedStatement.setString(2, odontologo.getNombre());
-            preparedStatement.setString(3, odontologo.getApellido());
+            preparedStatement.setInt(1, odontologo.getId());
+            preparedStatement.setInt(2, odontologo.getMatricula());
+            preparedStatement.setString(3, odontologo.getNombre());
+            preparedStatement.setString(4, odontologo.getApellido());
 
             preparedStatement.execute();
             preparedStatement.close();
@@ -52,10 +50,19 @@ public class OdontologoDAOH2 implements IDao<Odontologo> {
         return odontologo;
     }
 
+    @Override
+    public Odontologo buscar(Integer id) {
+        return null;
+    }
 
     @Override
-    public List<Odontologo> listar() {
-        List<Odontologo> odontologos = new ArrayList<>();
+    public Boolean eliminar(int id) {
+        return null;
+    }
+
+
+    @Override
+    public List<Odontologo> listar() {List<Odontologo> odontologos = new ArrayList<>();
 
         try {
             connection = DataBaseUtil.connection();
@@ -85,5 +92,10 @@ public class OdontologoDAOH2 implements IDao<Odontologo> {
             }
         }
         return odontologos;
+    }
+
+    @Override
+    public Odontologo actualizar(Odontologo odontologo) {
+        return null;
     }
 }

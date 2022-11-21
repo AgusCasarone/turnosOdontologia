@@ -2,15 +2,14 @@ package com.example.odontologos.model;
 
 public class Domicilio {
 
-
     private String calle, localidad, provincia;
 
 
+    private int id, numero;
     public int getId() {
         return id;
     }
 
-    private int id, numero;
 
     public String getCalle() {
         return calle;
@@ -44,10 +43,11 @@ public class Domicilio {
         this.numero = numero;
     }
 
-    public Domicilio(String calle, String localidad, String provincia, int numero) {
+    public Domicilio(int id, String calle, String localidad, String provincia, int numero) {
         this.calle = calle;
         this.localidad = localidad;
         this.provincia = provincia;
+        this.id = id;
         this.numero = numero;
     }
 
