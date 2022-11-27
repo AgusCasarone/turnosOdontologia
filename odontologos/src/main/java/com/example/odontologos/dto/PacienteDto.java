@@ -1,29 +1,16 @@
-package com.example.odontologos.model;
+package com.example.odontologos.dto;
 
-import javax.persistence.*;
+import com.example.odontologos.model.Domicilio;
 import java.sql.Date;
 
-@Entity
-public class Paciente {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class PacienteDto {
     private Integer id;
     private int dni;
     private String nombre, apellido;
-
-    @ManyToOne
     private Domicilio domicilio;
     private Date fechaDeAlta;
 
-
-    public Paciente(Integer id, String apellido, String nombre, Domicilio domicilio, int dni, Date fechaDeAlta) {
-        this.id = id;
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.domicilio = domicilio;
-        this.fechaDeAlta = fechaDeAlta;
+    public PacienteDto() {
     }
 
     public Integer getId() {
@@ -66,7 +53,7 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    public java.sql.Date getFechaDeAlta() {
+    public Date getFechaDeAlta() {
         return fechaDeAlta;
     }
 

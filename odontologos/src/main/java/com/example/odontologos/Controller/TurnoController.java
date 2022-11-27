@@ -1,7 +1,7 @@
 package com.example.odontologos.Controller;
 
 import com.example.odontologos.model.Turno;
-import com.example.odontologos.repository.impl.DomicilioRepository;
+import com.example.odontologos.repository.impl.IDomicilioRepository;
 import com.example.odontologos.service.OdontologoService;
 import com.example.odontologos.service.PacienteService;
 import com.example.odontologos.service.TurnoService;
@@ -13,12 +13,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
 
-    private static final Logger LOGGER = LogManager.getLogger(DomicilioRepository.class);
+    private static final Logger LOGGER = LogManager.getLogger(IDomicilioRepository.class);
     @Autowired
     private PacienteService pacienteService;
     @Autowired
@@ -30,7 +31,7 @@ public class TurnoController {
     public ResponseEntity<Turno> crear(@RequestBody Turno turno) {
 
         ResponseEntity<Turno> response;
-        if (pacienteService.buscar(turno.getPaciente().getId()) == null || odontologoService.buscar(turno.getOdontologo().getId()) == null) {
+        if (pacienteService.findById(turno.getPaciente().getId()) == null || !odontologoService.findById(turno.getOdontologo().getId()).isPresent()) {
             LOGGER.error("El odontólogo o el paciente no existen y no se pudo crear el turno.");
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         } else {
@@ -56,21 +57,20 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Turno> buscar(@PathVariable int id) {
+    public ResponseEntity<Optional<Turno>> buscar(@PathVariable Integer id) {
         return ResponseEntity.ok(turnoService.buscar(id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity eliminar(@PathVariable int id){
+    public ResponseEntity<Turno> eliminar(@PathVariable Integer id){
 
-        ResponseEntity response = null;
-
-        if (turnoService.eliminar(id)){
-            response = ResponseEntity.status(HttpStatus.OK).build();
+        if (turnoService.eliminar(id)) {
+            LOGGER.info("Se eliminó el turno con id %s" + id);
+            return ResponseEntity.status(HttpStatus.OK).build();
         } else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            LOGGER.error("No se encontró el turno con id %s" + id);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        return response;
     }
 
     // actualizar

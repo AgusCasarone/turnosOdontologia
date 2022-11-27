@@ -2,39 +2,45 @@ package com.example.odontologos.service;
 
 import com.example.odontologos.model.Turno;
 import com.example.odontologos.repository.IDao;
-import com.example.odontologos.repository.impl.TurnoRepository;
+import com.example.odontologos.repository.impl.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class TurnoService {
 
     @Autowired
-    private IDao<Turno> turnoRepository;
+    private ITurnoRepository turnoRepository;
 
-    public void TurnosService(TurnoRepository turnoRepository) {
-        this.turnoRepository = turnoRepository;
+    public void TurnosService(ITurnoRepository ITurnoRepository) {
+        this.turnoRepository = ITurnoRepository;
     }
 
     public Turno guardar(Turno turno) {
-        return this.turnoRepository.crear(turno);
+        return this.turnoRepository.save(turno);
     }
 
     public List<Turno> listar() {
-        return turnoRepository.listar();
+        return turnoRepository.findAll();
     }
 
-    public Turno buscar(Integer id) {
-        return turnoRepository.buscar(id);
+    public Optional<Turno> buscar(Integer id) {
+        return turnoRepository.findById(id);
     }
 
-    public boolean eliminar(int id) {
-        return turnoRepository.eliminar(id);
+    public boolean eliminar(Integer id) {
+        if (turnoRepository.existsById(id)){
+            turnoRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public Turno actualizar(Turno turno){
+    /* public Turno actualizar(Turno turno){
         return turnoRepository.actualizar(turno);
-    }
+    } */
 }

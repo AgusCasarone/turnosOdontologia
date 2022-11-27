@@ -1,12 +1,21 @@
 package com.example.odontologos.model;
 
+import javax.persistence.*;
 import java.sql.Date;
 import java.sql.Time;
 
+@Entity
 public  class Turno {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "paciente_id")
     private Paciente paciente;
+    @ManyToOne
+    @JoinColumn(name = "odontologo_id")
     private Odontologo odontologo;
     private Date fecha;
     private Time hora;
@@ -19,11 +28,11 @@ public  class Turno {
         this.hora = hora;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

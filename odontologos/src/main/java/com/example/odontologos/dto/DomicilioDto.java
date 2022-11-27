@@ -1,29 +1,10 @@
-package com.example.odontologos.model;
+package com.example.odontologos.dto;
 
-import javax.persistence.*;
-import java.util.Set;
+public class DomicilioDto {
 
-
-@Entity
-public class Domicilio {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String calle, localidad, provincia;
     private int numero;
-
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "domicilio_id")
-    private Set<Paciente> pacientes;
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
 
     public Integer getId() {
         return id;
@@ -56,5 +37,15 @@ public class Domicilio {
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
-}
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public DomicilioDto() {
+    }
+}

@@ -1,40 +1,41 @@
 package com.example.odontologos.service;
 
 import com.example.odontologos.model.Paciente;
-import com.example.odontologos.repository.IDao;
-import com.example.odontologos.repository.impl.PacienteRepository;
+import com.example.odontologos.repository.impl.IPacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class PacienteService {
 
     @Autowired
-    private IDao<Paciente> pacienteRepository;
-
-    public PacienteService(PacienteRepository pacienteRepository) {
-        this.pacienteRepository = pacienteRepository;
-    }
+    private IPacienteRepository pacienteRepository;
 
     public Paciente guardar(Paciente paciente) {
-        return pacienteRepository.crear(paciente);
+        return pacienteRepository.save(paciente);
     }
 
-    public Paciente buscar(int id) {
-        return pacienteRepository.buscar(id);
+    public Optional<Paciente> findById(Integer id) {
+        return pacienteRepository.findById(id);
     }
 
     public Boolean eliminar(Integer id){
-       return pacienteRepository.eliminar(id);
+        if (pacienteRepository.existsById(id)){
+            pacienteRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public Paciente actualizar(Paciente paciente){
-        return pacienteRepository.actualizar(paciente);
-    }
+    /* public Paciente actualizar(Integer paciente){
+        return pacienteRepository.;
+    } */
 
-    public List<Paciente> listar() {
-        return pacienteRepository.listar();
+    public List<Paciente> listarPacientes() {
+        return pacienteRepository.findAll();
     }
 }

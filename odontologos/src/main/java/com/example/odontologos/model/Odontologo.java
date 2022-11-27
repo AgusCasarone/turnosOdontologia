@@ -1,20 +1,38 @@
 package com.example.odontologos.model;
 
-public class Odontologo extends Persona {
+import javax.persistence.*;
+import javax.persistence.Entity;
 
-    private int id, matricula;
+@Entity
+public class Odontologo {
 
-    public Odontologo(int id, int matricula, String nombre, String apellido) {
-        super(apellido, nombre);
-        this.id = id;
-        this.matricula = matricula;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @Column
+    private int matricula;
+    @Column
+    private String nombre;
+    @Column
+    private String apellido;
+
+
+
+    public Odontologo() {
     }
 
-    public int getId() {
+    public Odontologo(Integer id, int matricula, String nombre, String apellido) {
+        this.id = id;
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

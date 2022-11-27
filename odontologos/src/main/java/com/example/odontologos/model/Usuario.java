@@ -4,13 +4,22 @@ import com.example.odontologos.service.CrearPersona;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.sql.Date;
 
+//@Entity
 public class Usuario {
 
+    /*
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String user, password;
     private Rol rol;
-    private int id;
 
     private static final Logger logger = LogManager.getLogger(CrearPersona.class);
 
@@ -24,7 +33,7 @@ public class Usuario {
 
     }
 
-    public Paciente crearPaciente(String nombre, String apellido, String domicilio, Date fechaAlta, int dni, Usuario usuario) {
+    public Paciente crearPaciente(String nombre, String apellido, Domicilio domicilio, Date fechaAlta, int dni, Usuario usuario) {
         if(usuario.getRol().getNombre().equals("admin")) {
             logger.info(String.format("Se creó un paciente con el nombre %s, el apellido %s, la fecha de alta %s y el DNI %s por el usuario %s", nombre, apellido, fechaAlta, dni, usuario));
             return new Paciente(1, apellido, nombre, domicilio, dni, fechaAlta);
@@ -33,6 +42,10 @@ public class Usuario {
         return null;
     }
 
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public String getUser() {
         return user;
     }
@@ -63,7 +76,7 @@ public class Usuario {
         this.rol = rol;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
-    }
+    } */
 }

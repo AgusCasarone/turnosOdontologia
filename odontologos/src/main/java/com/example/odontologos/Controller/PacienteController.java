@@ -1,7 +1,6 @@
 package com.example.odontologos.Controller;
 
 import com.example.odontologos.model.Paciente;
-import com.example.odontologos.repository.impl.DomicilioRepository;
 import com.example.odontologos.service.OdontologoService;
 import com.example.odontologos.service.PacienteService;
 import com.example.odontologos.service.TurnoService;
@@ -13,29 +12,38 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
 
-    private static final Logger LOGGER = LogManager.getLogger(DomicilioRepository.class);
+    private static final Logger LOGGER = LogManager.getLogger(PacienteController.class);
 
     @Autowired
     private PacienteService pacienteService;
 
-    @Autowired
-    private TurnoService turnoService;
 
-    @Autowired
-    private OdontologoService odontologoService;
-
-    @GetMapping
-    public List<Paciente> listar() {
-        return pacienteService.listar();
+    @PostMapping
+    public ResponseEntity<Paciente> crear(@RequestBody Paciente paciente){
+        return ResponseEntity.ok(pacienteService.guardar(paciente));
     }
 
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Paciente>> buscar(@PathVariable int id){
+        return ResponseEntity.ok(pacienteService.findById(id));
+    }
+
+
+    /* @PutMapping
+    public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente){
+        return ResponseEntity.ok(pacienteService.actualizar(paciente));
+    } */
+
+
     @DeleteMapping("/{id}")
-    public ResponseEntity eliminar(@PathVariable int id) {
+    public ResponseEntity<Paciente> eliminar(@PathVariable int id) {
 
         ResponseEntity response = null;
 
@@ -49,18 +57,12 @@ public class PacienteController {
         return response;
     }
 
-    @PostMapping
-    public ResponseEntity<Paciente> crear(@RequestBody Paciente paciente){
-        return ResponseEntity.ok(pacienteService.guardar(paciente));
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<List<Paciente>> listarPacientes() {
+        return ResponseEntity.ok(pacienteService.listarPacientes());
     }
 
-    @PutMapping
-    public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente){
-        return ResponseEntity.ok(pacienteService.actualizar(paciente));
-    }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Paciente> buscar(@PathVariable int id){
-        return ResponseEntity.ok(pacienteService.buscar(id));
-    }
+
+
 }
