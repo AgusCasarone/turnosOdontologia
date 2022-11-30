@@ -31,7 +31,7 @@ public class TurnoController {
     public ResponseEntity<Turno> crear(@RequestBody Turno turno) {
 
         ResponseEntity<Turno> response;
-        if (pacienteService.findById(turno.getPaciente().getId()) == null || !odontologoService.findById(turno.getOdontologo().getId()).isPresent()) {
+        if (pacienteService.findPacienteById(turno.getPaciente().getId()) == null || !odontologoService.findOdontologoById(turno.getOdontologo().getId()).isPresent()) {
             LOGGER.error("El odontólogo o el paciente no existen y no se pudo crear el turno.");
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         } else {

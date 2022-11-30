@@ -25,14 +25,14 @@ public class OdontologoController {
     @PostMapping (value = "add")
     public ResponseEntity<OdontologoDto> addOdontologo(@RequestBody OdontologoDto odontologoDto) {
         LOGGER.info("Se creó un nuevo odontólogo");
-        return ResponseEntity.ok(parseEntityToDto(odontologoService.save(odontologoDto)));
+        return ResponseEntity.ok(odontologoService.parseOdontologoEntityToDto(odontologoService.addOdontologo(odontologoDto)));
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Optional<Odontologo>> findById(@PathVariable Integer id){
-        if (odontologoService.findById(id).isPresent()) {
-            LOGGER.info("Se encontró el odontólogo el odontólogo con id %s" + id);
-            return ResponseEntity.ok(odontologoService.findById(id));
+    public ResponseEntity<Optional<Odontologo>> findOdontologoById(@PathVariable Integer id){
+        if (odontologoService.findOdontologoById(id).isPresent()) {
+            LOGGER.info("Se encontró el odontólogo con id %s" + id);
+            return ResponseEntity.ok(odontologoService.findOdontologoById(id));
         } else {
             LOGGER.error("No se encontró ningún odontólogo con id %s" + id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -41,26 +41,14 @@ public class OdontologoController {
 
     @PutMapping(value = "update/{id}")
     public ResponseEntity<Odontologo> updateOdontologo(@PathVariable Integer id, @RequestBody OdontologoDto odontologoDto){
-        if (odontologoService.findById(id).isPresent()) {
+        if (odontologoService.findOdontologoById(id).isPresent()) {
             LOGGER.info("Se actualizó el odontólogo con id %s" + id);
             odontologoDto.setId(id);
-            return ResponseEntity.ok(odontologoService.save(odontologoDto));
+            return ResponseEntity.ok(odontologoService.addOdontologo(odontologoDto));
         } else {
             LOGGER.error("No se encontró ningún odontólogo con id %s" + id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-    }
-
-    private OdontologoDto parseEntityToDto(Odontologo odontologoEntity) {
-
-        OdontologoDto odontologoDto = new OdontologoDto();
-
-        odontologoDto.id = odontologoEntity.getId();
-        odontologoDto.nombre = odontologoEntity.getNombre();
-        odontologoDto.apellido = odontologoEntity.getApellido();
-        odontologoDto.matricula = odontologoEntity.getMatricula();
-
-        return odontologoDto;
     }
 
     @DeleteMapping(value = "delete/{id}")
@@ -76,6 +64,6 @@ public class OdontologoController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Odontologo>> listOdontologos(){
-        return ResponseEntity.ok(odontologoService.listarOdontologos());
+        return ResponseEntity.ok(odontologoService.listOdontologos());
     }
 }

@@ -4,48 +4,42 @@ import com.example.odontologos.dto.OdontologoDto;
 import com.example.odontologos.model.Odontologo;
 import com.example.odontologos.repository.impl.IOdontologoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class OdontologoService {
 
     @Autowired
-    private IOdontologoRepository IOdontologoRepository;
+    private IOdontologoRepository odontologoRepository;
 
-    public OdontologoService(com.example.odontologos.repository.impl.IOdontologoRepository IOdontologoRepository) {
-        this.IOdontologoRepository = IOdontologoRepository;
+    public Odontologo addOdontologo(OdontologoDto odontologoDto) {
+
+        Odontologo odontologoEntity = parseOdontologoDtoToEntity(odontologoDto);
+        return odontologoRepository.save(odontologoEntity);
     }
 
-    public Odontologo save(OdontologoDto odontologoDto) {
-
-        Odontologo odontologoEntity = parseDtoToEntity(odontologoDto);
-        return IOdontologoRepository.save(odontologoEntity);
-    }
-
-
-    public List<Odontologo> listarOdontologos() {
-        return IOdontologoRepository.findAll();
-    }
-
-    public Optional<Odontologo> findById(Integer id) {
-        return IOdontologoRepository.findById(id);
+    public Optional<Odontologo> findOdontologoById(Integer id) {
+        return odontologoRepository.findById(id);
     }
 
     public boolean deleteOdontologo(Integer id){
 
-        if (IOdontologoRepository.existsById(id)){
-            IOdontologoRepository.deleteById(id);
+        if (odontologoRepository.existsById(id)){
+            odontologoRepository.deleteById(id);
             return true;
         } else {
             return false;
         }
     }
 
+    public List<Odontologo> listOdontologos() {
+        return odontologoRepository.findAll();
+    }
 
-    private Odontologo parseDtoToEntity(OdontologoDto odontologoDto) {
+    private Odontologo parseOdontologoDtoToEntity(OdontologoDto odontologoDto) {
 
         Odontologo odontologoEntity = new Odontologo();
 
@@ -55,5 +49,17 @@ public class OdontologoService {
         odontologoEntity.setMatricula(odontologoDto.matricula);
 
         return odontologoEntity;
+    }
+
+    public OdontologoDto parseOdontologoEntityToDto(Odontologo odontologoEntity) {
+
+        OdontologoDto odontologoDto = new OdontologoDto();
+
+        odontologoDto.id = odontologoEntity.getId();
+        odontologoDto.nombre = odontologoEntity.getNombre();
+        odontologoDto.apellido = odontologoEntity.getApellido();
+        odontologoDto.matricula = odontologoEntity.getMatricula();
+
+        return odontologoDto;
     }
 }
