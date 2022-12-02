@@ -2,9 +2,8 @@ package com.example.odontologos.service;
 
 import com.example.odontologos.dto.PacienteDto;
 import com.example.odontologos.model.Paciente;
-import com.example.odontologos.repository.impl.IPacienteRepository;
+import com.example.odontologos.repository.IPacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

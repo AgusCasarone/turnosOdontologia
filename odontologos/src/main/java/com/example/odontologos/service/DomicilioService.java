@@ -1,14 +1,11 @@
 package com.example.odontologos.service;
 
 import com.example.odontologos.dto.DomicilioDto;
-import com.example.odontologos.dto.OdontologoDto;
 import com.example.odontologos.model.Domicilio;
-import com.example.odontologos.model.Odontologo;
-import com.example.odontologos.repository.impl.IDomicilioRepository;
+import com.example.odontologos.repository.IDomicilioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Optional;
 

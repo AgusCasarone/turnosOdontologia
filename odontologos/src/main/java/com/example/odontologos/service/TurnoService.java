@@ -1,8 +1,7 @@
 package com.example.odontologos.service;
 
 import com.example.odontologos.model.Turno;
-import com.example.odontologos.repository.IDao;
-import com.example.odontologos.repository.impl.ITurnoRepository;
+import com.example.odontologos.repository.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

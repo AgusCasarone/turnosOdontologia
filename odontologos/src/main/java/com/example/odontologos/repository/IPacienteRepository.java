@@ -1,4 +1,4 @@
-package com.example.odontologos.repository.impl;
+package com.example.odontologos.repository;
 
 import com.example.odontologos.model.Paciente;
 import org.springframework.data.jpa.repository.JpaRepository;

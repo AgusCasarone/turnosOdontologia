@@ -1,7 +1,7 @@
 package com.example.odontologos.Controller;
 
 import com.example.odontologos.model.Turno;
-import com.example.odontologos.repository.impl.IDomicilioRepository;
+import com.example.odontologos.repository.IDomicilioRepository;
 import com.example.odontologos.service.OdontologoService;
 import com.example.odontologos.service.PacienteService;
 import com.example.odontologos.service.TurnoService;
@@ -36,10 +36,9 @@ public class TurnoController {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         } else {
             LOGGER.info("Turno registrado con éxito. " +
-                    "\n FECHA: %s" +
-                    "\n HORA: %s" +
-                    "\n ID ODONTÓLOGO: %s" +
-                    "\n ID PACIENTE: %s." + turno.getFecha() + turno.getHora() + turno.getOdontologo() + turno.getPaciente());
+                    "\n FECHA Y HORA: \s \s" +
+                    "\n ID ODONTÓLOGO: \s" +
+                    "\n ID PACIENTE: \s." + turno.getFecha(), turno.getHora(), turno.getOdontologo(), turno.getPaciente());
             response = ResponseEntity.ok(turnoService.guardar(turno));
         }
         return response;
@@ -52,7 +51,7 @@ public class TurnoController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         LOGGER.info("Los turnos existentes son:" +
-                "\n %s" + turnoService.listar());
+                "\n \s" + turnoService.listar());
         return ResponseEntity.ok(turnoService.listar());
     }
 
@@ -65,10 +64,10 @@ public class TurnoController {
     public ResponseEntity<Turno> eliminar(@PathVariable Integer id){
 
         if (turnoService.eliminar(id)) {
-            LOGGER.info("Se eliminó el turno con id %s" + id);
+            LOGGER.info("Se eliminó el turno con id \s" + id);
             return ResponseEntity.status(HttpStatus.OK).build();
         } else {
-            LOGGER.error("No se encontró el turno con id %s" + id);
+            LOGGER.error("No se encontró el turno con id \s" + id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }

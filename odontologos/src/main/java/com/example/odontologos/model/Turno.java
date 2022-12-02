@@ -20,6 +20,9 @@ public  class Turno {
     private Date fecha;
     private Time hora;
 
+    public Turno() {
+    }
+
     public Turno(int id, Paciente paciente, Odontologo odontologo, Date fecha, Time hora) {
         this.id = id;
         this.paciente = paciente;

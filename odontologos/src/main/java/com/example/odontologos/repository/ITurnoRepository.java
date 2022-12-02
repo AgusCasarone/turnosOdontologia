@@ -1,4 +1,4 @@
-package com.example.odontologos.repository.impl;
+package com.example.odontologos.repository;
 
 import com.example.odontologos.model.Turno;
 import org.springframework.data.jpa.repository.JpaRepository;
