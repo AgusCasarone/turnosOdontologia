@@ -31,10 +31,10 @@ public class DomicilioController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Domicilio>> findDomicilioById(@PathVariable Integer id){
         if (domicilioService.findDomicilioById(id).isPresent()) {
-            LOGGER.info("Se encontró el domicilio con id " + id);
+            LOGGER.info(String.format("Se encontró el domicilio con id %s", id));
             return ResponseEntity.ok(domicilioService.findDomicilioById(id));
         } else {
-            LOGGER.error("No se encontró ningún domicilio con el id " + id);
+            LOGGER.error(String.format("No se encontró ningún domicilio con el id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -42,11 +42,11 @@ public class DomicilioController {
     @PutMapping(value = "update/{id}")
     public ResponseEntity<Domicilio> updateDomicilio(@PathVariable Integer id, @RequestBody DomicilioDto domicilioDto) {
         if (domicilioService.findDomicilioById(id).isPresent()) {
-            LOGGER.info("Se actualizó el domicilio con id " + id);
+            LOGGER.info(String.format("Se actualizó el domicilio con id %s", id));
             domicilioDto.setId(id);
             return ResponseEntity.ok(domicilioService.addDomicilio(domicilioDto));
         } else {
-            LOGGER.error("No se encontró ningún odontólogo con el id " + id);
+            LOGGER.error(String.format("No se encontró ningún odontólogo con el id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -54,10 +54,10 @@ public class DomicilioController {
     @DeleteMapping(value = "delete/{id}")
     public ResponseEntity<Domicilio> deleteDomicilio(@PathVariable Integer id) {
         if (domicilioService.deleteDomicilio(id)) {
-            LOGGER.info("Se eliminó el domicilio con id " + id);
+            LOGGER.info(String.format("Se eliminó el domicilio con id %s", id));
             return ResponseEntity.status(HttpStatus.OK).build();
         } else{
-            LOGGER.error("No se encontró ningún comicilio con id " + id);
+            LOGGER.error(String.format("No se encontró ningún comicilio con id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }

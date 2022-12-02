@@ -24,9 +24,9 @@ public class PacienteController {
 
 
     @PostMapping (value = "add")
-    public ResponseEntity<Paciente> addPaciente(@RequestBody PacienteDto pacienteDto){
+    public ResponseEntity<PacienteDto> addPaciente(@RequestBody PacienteDto pacienteDto){
         LOGGER.info("Se creó un nuevo paciente");
-        return ResponseEntity.ok(pacienteService.addPaciente(pacienteDto));
+        return ResponseEntity.ok(pacienteService.parsePacienteEntityToDto(pacienteService.addPaciente(pacienteDto)));
     }
 
 
@@ -34,10 +34,10 @@ public class PacienteController {
     public ResponseEntity<Optional<Paciente>> findPacienteById(@PathVariable int id){
 
         if (pacienteService.findPacienteById(id).isPresent()){
-            LOGGER.info("Se encontró el paciente con id %s" + id);
+            LOGGER.info(String.format("Se encontró el paciente con id %s", id));
             return ResponseEntity.ok(pacienteService.findPacienteById(id));
         } else {
-            LOGGER.error("No se encontró ningún paciente con el id %s" + id);
+            LOGGER.error(String.format("No se encontró ningún paciente con el id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -47,12 +47,12 @@ public class PacienteController {
     public ResponseEntity<Paciente> updatePaciente(@PathVariable Integer id, @RequestBody PacienteDto pacienteDto){
 
         if (pacienteService.findPacienteById(id).isPresent()) {
-            LOGGER.info("Se actualizó el paciente con id %s" + id);
+            LOGGER.info(String.format("Se actualizó el paciente con id %s", id));
             pacienteDto.setId(id);
             return ResponseEntity.ok(pacienteService.addPaciente(pacienteDto));
 
         } else {
-            LOGGER.error("No se encontró ningún paciente con id %s" + id);
+            LOGGER.error(String.format("No se encontró ningún paciente con id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
@@ -62,10 +62,10 @@ public class PacienteController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Paciente> deletePaciente(@PathVariable int id) {
         if (pacienteService.deletePaciente(id)) {
-            LOGGER.info("Se eliminó el paciente con id %s" + id);
+            LOGGER.info(String.format("Se eliminó el paciente con id %s", id));
             return ResponseEntity.status(HttpStatus.OK).build();
         } else {
-            LOGGER.error("No se encontró el paciente con id %s y no pudo ser eliminado" + id);
+            LOGGER.error(String.format("No se encontró el paciente con id %s y no pudo ser eliminado", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }

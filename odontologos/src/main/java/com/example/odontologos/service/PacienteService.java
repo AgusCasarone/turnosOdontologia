@@ -16,7 +16,6 @@ public class PacienteService {
     private IPacienteRepository pacienteRepository;
 
     public Paciente addPaciente(PacienteDto pacienteDto) {
-
         Paciente pacienteEntity = parsePacienteDtoToEntity(pacienteDto);
         return pacienteRepository.save(pacienteEntity);
     }
@@ -55,6 +54,7 @@ public class PacienteService {
     }
 
     public PacienteDto parsePacienteEntityToDto(Paciente pacienteEntity) {
+
         PacienteDto pacienteDto = new PacienteDto();
 
         pacienteDto.setId(pacienteEntity.getId());

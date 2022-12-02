@@ -1,5 +1,6 @@
 package com.example.odontologos.service;
 
+import com.example.odontologos.dto.TurnoDto;
 import com.example.odontologos.model.Turno;
 import com.example.odontologos.repository.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,11 @@ public class TurnoService {
     @Autowired
     private ITurnoRepository turnoRepository;
 
-    public void TurnosService(ITurnoRepository ITurnoRepository) {
-        this.turnoRepository = ITurnoRepository;
+    public Turno guardar(TurnoDto turnoDto) {
+        Turno turnoEntity = parseTurnoDtoToEntity(turnoDto);
+        return this.turnoRepository.save(turnoEntity);
     }
 
-    public Turno guardar(Turno turno) {
-        return this.turnoRepository.save(turno);
-    }
 
     public List<Turno> listar() {
         return turnoRepository.findAll();
@@ -39,7 +38,31 @@ public class TurnoService {
         }
     }
 
-    /* public Turno actualizar(Turno turno){
-        return turnoRepository.actualizar(turno);
-    } */
+
+    private Turno parseTurnoDtoToEntity(TurnoDto turnoDto) {
+
+        Turno turnoEntity = new Turno();
+
+        turnoEntity.setId(turnoDto.getId());
+        turnoEntity.setOdontologo(turnoDto.getOdontologo());
+        turnoEntity.setPaciente(turnoDto.getPaciente());
+        turnoEntity.setFecha(turnoDto.getFecha());
+        turnoEntity.setHora(turnoDto.getHora());
+
+        return turnoEntity;
+    }
+
+    public TurnoDto parseTurnoEntityToDto(Turno turnoEntity) {
+
+        TurnoDto turnoDto = new TurnoDto();
+
+        turnoDto.setId(turnoEntity.getId());
+        turnoDto.setFecha(turnoEntity.getFecha());
+        turnoDto.setHora(turnoEntity.getHora());
+        turnoDto.setOdontologo(turnoEntity.getOdontologo());
+        turnoDto.setPaciente(turnoEntity.getPaciente());
+
+        return turnoDto;
+
+    }
 }

@@ -31,10 +31,10 @@ public class OdontologoController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Odontologo>> findOdontologoById(@PathVariable Integer id){
         if (odontologoService.findOdontologoById(id).isPresent()) {
-            LOGGER.info("Se encontró el odontólogo con id %s" + id);
+            LOGGER.info(String.format("Se encontró el odontólogo con id %s", id));
             return ResponseEntity.ok(odontologoService.findOdontologoById(id));
         } else {
-            LOGGER.error("No se encontró ningún odontólogo con id %s" + id);
+            LOGGER.error(String.format("No se encontró ningún odontólogo con id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -42,11 +42,11 @@ public class OdontologoController {
     @PutMapping(value = "update/{id}")
     public ResponseEntity<Odontologo> updateOdontologo(@PathVariable Integer id, @RequestBody OdontologoDto odontologoDto){
         if (odontologoService.findOdontologoById(id).isPresent()) {
-            LOGGER.info("Se actualizó el odontólogo con id %s" + id);
+            LOGGER.info(String.format("Se actualizó el odontólogo con id %s", id));
             odontologoDto.setId(id);
             return ResponseEntity.ok(odontologoService.addOdontologo(odontologoDto));
         } else {
-            LOGGER.error("No se encontró ningún odontólogo con id %s" + id);
+            LOGGER.error(String.format("No se encontró ningún odontólogo con id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -54,10 +54,10 @@ public class OdontologoController {
     @DeleteMapping(value = "delete/{id}")
     public ResponseEntity<Odontologo> deleteOdontologo(@PathVariable Integer id) {
         if (odontologoService.deleteOdontologo(id)) {
-            LOGGER.info("Se eliminó el odontólogo con id %s" + id);
+            LOGGER.info(String.format("Se eliminó el odontólogo con id %s", id));
             return ResponseEntity.status(HttpStatus.OK).build();
         } else {
-            LOGGER.error("No se encontró el odontólogo con id %s" + id);
+            LOGGER.error(String.format("No se encontró el odontólogo con id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }

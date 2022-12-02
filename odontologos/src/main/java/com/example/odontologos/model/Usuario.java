@@ -1,6 +1,5 @@
 package com.example.odontologos.model;
 
-import com.example.odontologos.service.CrearPersona;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

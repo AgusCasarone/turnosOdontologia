@@ -1,5 +1,6 @@
 package com.example.odontologos.Controller;
 
+import com.example.odontologos.dto.TurnoDto;
 import com.example.odontologos.model.Turno;
 import com.example.odontologos.repository.IDomicilioRepository;
 import com.example.odontologos.service.OdontologoService;
@@ -28,20 +29,18 @@ public class TurnoController {
     private OdontologoService odontologoService;
 
     @PostMapping
-    public ResponseEntity<Turno> crear(@RequestBody Turno turno) {
+    public ResponseEntity<TurnoDto> crear(@RequestBody TurnoDto turnoDto) {
 
-        ResponseEntity<Turno> response;
-        if (pacienteService.findPacienteById(turno.getPaciente().getId()) == null || !odontologoService.findOdontologoById(turno.getOdontologo().getId()).isPresent()) {
+        if (!pacienteService.findPacienteById(turnoDto.getPaciente().getId()).isPresent()|| !odontologoService.findOdontologoById(turnoDto.getOdontologo().getId()).isPresent()) {
             LOGGER.error("El odontólogo o el paciente no existen y no se pudo crear el turno.");
-            response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         } else {
-            LOGGER.info("Turno registrado con éxito. " +
-                    "\n FECHA Y HORA: \s \s" +
-                    "\n ID ODONTÓLOGO: \s" +
-                    "\n ID PACIENTE: \s." + turno.getFecha(), turno.getHora(), turno.getOdontologo(), turno.getPaciente());
-            response = ResponseEntity.ok(turnoService.guardar(turno));
+            LOGGER.info(String.format("Turno registrado con éxito. " +
+                    "\n FECHA Y HORA: %s %s" +
+                    "\n ID ODONTÓLOGO: %s" +
+                    "\n ID PACIENTE: %s.", turnoDto.getFecha(), turnoDto.getHora(), turnoDto.getOdontologo().getId(), turnoDto.getPaciente().getId()));
+            return ResponseEntity.ok(turnoService.parseTurnoEntityToDto(turnoService.guardar(turnoDto)));
         }
-        return response;
     }
 
     @GetMapping
@@ -50,8 +49,7 @@ public class TurnoController {
             LOGGER.error("No existen turnos para listar.");
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
-        LOGGER.info("Los turnos existentes son:" +
-                "\n \s" + turnoService.listar());
+        LOGGER.info(String.format("Se listan los %s turnos existentes.", turnoService.listar().size()));
         return ResponseEntity.ok(turnoService.listar());
     }
 
@@ -64,15 +62,25 @@ public class TurnoController {
     public ResponseEntity<Turno> eliminar(@PathVariable Integer id){
 
         if (turnoService.eliminar(id)) {
-            LOGGER.info("Se eliminó el turno con id \s" + id);
+            LOGGER.info(String.format("Se eliminó el turno con id %s", id));
             return ResponseEntity.status(HttpStatus.OK).build();
         } else {
-            LOGGER.error("No se encontró el turno con id \s" + id);
+            LOGGER.error(String.format("No se encontró el turno con id %s",id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
-    // actualizar
+    @PutMapping (value = "update/{id}")
+    public ResponseEntity<Turno> updateTurno(@PathVariable Integer id, @RequestBody TurnoDto turnoDto){
+        if (turnoService.buscar(id).isPresent()) {
+            LOGGER.info(String.format("Se actualizó el turno con id %s", id));
+            turnoDto.setId(id);
+            return ResponseEntity.ok(turnoService.guardar(turnoDto));
+        } else {
+            LOGGER.error(String.format("No se encontró ningún turno con el id %s", id));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
 
 
 }
