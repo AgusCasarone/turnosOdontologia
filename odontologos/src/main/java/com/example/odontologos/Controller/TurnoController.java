@@ -6,6 +6,8 @@ import com.example.odontologos.repository.IDomicilioRepository;
 import com.example.odontologos.service.OdontologoService;
 import com.example.odontologos.service.PacienteService;
 import com.example.odontologos.service.TurnoService;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +75,7 @@ public class TurnoController {
     @PutMapping (value = "update/{id}")
     public ResponseEntity<Turno> updateTurno(@PathVariable Integer id, @RequestBody TurnoDto turnoDto){
         if (turnoService.buscar(id).isPresent()) {
+            excludeNullValues();
             LOGGER.info(String.format("Se actualizó el turno con id %s", id));
             turnoDto.setId(id);
             return ResponseEntity.ok(turnoService.guardar(turnoDto));
@@ -80,6 +83,11 @@ public class TurnoController {
             LOGGER.error(String.format("No se encontró ningún turno con el id %s", id));
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
+    }
+
+    public void excludeNullValues() {
+        ObjectMapper jsonMapper = new ObjectMapper();
+        jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
 

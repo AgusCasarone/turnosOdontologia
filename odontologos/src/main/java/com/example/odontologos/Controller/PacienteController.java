@@ -3,6 +3,8 @@ package com.example.odontologos.Controller;
 import com.example.odontologos.dto.PacienteDto;
 import com.example.odontologos.model.Paciente;
 import com.example.odontologos.service.PacienteService;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +49,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> updatePaciente(@PathVariable Integer id, @RequestBody PacienteDto pacienteDto){
 
         if (pacienteService.findPacienteById(id).isPresent()) {
+            excludeNullValues();
             LOGGER.info(String.format("Se actualizó el paciente con id %s", id));
             pacienteDto.setId(id);
             return ResponseEntity.ok(pacienteService.addPaciente(pacienteDto));
@@ -74,4 +77,10 @@ public class PacienteController {
     public ResponseEntity<List<Paciente>> listarPacientes() {
         return ResponseEntity.ok(pacienteService.listPacientes());
     }
+
+    public void excludeNullValues() {
+        ObjectMapper jsonMapper = new ObjectMapper();
+        jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    }
+
 }

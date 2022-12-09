@@ -3,7 +3,7 @@ package com.example.odontologos.dto;
 public class OdontologoDto {
 
     public Integer id;
-    public int matricula;
+    public Integer matricula;
     public String nombre;
     public String apellido;
 
@@ -18,11 +18,11 @@ public class OdontologoDto {
         this.id = id;
     }
 
-    public int getMatricula() {
+    public Integer getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(Integer matricula) {
         this.matricula = matricula;
     }
 

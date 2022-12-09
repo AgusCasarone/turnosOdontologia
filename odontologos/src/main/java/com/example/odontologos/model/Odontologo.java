@@ -10,12 +10,11 @@ public class Odontologo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column
-    private int matricula;
+    private Integer matricula;
     @Column
     private String nombre;
     @Column
     private String apellido;
-
 
 
     public Odontologo() {
@@ -36,11 +35,11 @@ public class Odontologo {
         this.id = id;
     }
 
-    public int getMatricula() {
+    public Integer getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(Integer matricula) {
         this.matricula = matricula;
     }
 

@@ -1,191 +1,273 @@
-2022-12-02 00:53:54.949  INFO 13364 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 13364 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 00:53:54.984  INFO 13364 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 00:53:56.343  INFO 13364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 00:53:56.430  INFO 13364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
-2022-12-02 00:53:57.321  INFO 13364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 00:53:57.336  INFO 13364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 00:53:57.336  INFO 13364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 00:53:57.521  INFO 13364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 00:53:57.522  INFO 13364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2342 ms
-2022-12-02 00:53:57.888  INFO 13364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 00:53:57.975  INFO 13364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 00:53:58.264  INFO 13364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 00:53:58.390  INFO 13364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 00:53:58.781  INFO 13364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 00:53:58.860  INFO 13364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 00:53:59.739  INFO 13364 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 00:53:59.747  INFO 13364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 00:54:00.246  WARN 13364 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 00:54:00.601  WARN 13364 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 00:54:00.746  WARN 13364 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 00:54:00.823  INFO 13364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 00:54:00.843  INFO 13364 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 6.547 seconds (JVM running for 7.258)
-2022-12-02 00:54:21.094  INFO 13364 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 00:54:21.095  INFO 13364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 00:54:21.096  INFO 13364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-02 00:55:38.797  INFO 13364 --- [http-nio-8080-exec-6] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA:    
- ID ODONTÓLOGO:  
- ID PACIENTE:  .2022-12-02
-2022-12-02 11:01:46.746  INFO 9012 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 9012 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 11:01:46.764  INFO 9012 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 11:01:48.301  INFO 9012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 11:01:48.459  INFO 9012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 4 JPA repository interfaces.
-2022-12-02 11:01:49.380  INFO 9012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 11:01:49.399  INFO 9012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 11:01:49.399  INFO 9012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 11:01:49.616  INFO 9012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 11:01:49.616  INFO 9012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2755 ms
-2022-12-02 11:01:49.942  INFO 9012 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 11:01:50.030  INFO 9012 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 11:01:50.260  INFO 9012 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 11:01:50.392  INFO 9012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 11:01:50.853  INFO 9012 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 11:01:50.895  INFO 9012 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 11:01:51.739  INFO 9012 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 11:01:51.749  INFO 9012 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:01:52.644  WARN 9012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 11:01:53.382  WARN 9012 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 11:01:53.554  WARN 9012 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 11:01:53.640  INFO 9012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 11:01:53.655  INFO 9012 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 7.764 seconds (JVM running for 8.771)
-2022-12-02 11:01:58.931  INFO 9012 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 11:01:58.931  INFO 9012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 11:01:58.932  INFO 9012 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-02 11:01:59.166  INFO 9012 --- [http-nio-8080-exec-1] c.e.o.repository.IDomicilioRepository    : Se listan los %s turnos existentes.
-2022-12-02 11:03:04.125  INFO 9012 --- [http-nio-8080-exec-5] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA: %s %s
- ID ODONTÓLOGO: %s
- ID PACIENTE: %s.
-2022-12-02 11:03:34.202  INFO 9012 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:03:34.204  INFO 9012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-02 11:03:34.206  INFO 9012 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-02 11:03:40.154  INFO 2704 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 2704 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 11:03:40.160  INFO 2704 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 11:03:41.248  INFO 2704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 11:03:41.492  INFO 2704 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228 ms. Found 4 JPA repository interfaces.
-2022-12-02 11:03:42.758  INFO 2704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 11:03:42.771  INFO 2704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 11:03:42.772  INFO 2704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 11:03:42.917  INFO 2704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 11:03:42.917  INFO 2704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2640 ms
-2022-12-02 11:03:43.197  INFO 2704 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 11:03:43.258  INFO 2704 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 11:03:43.468  INFO 2704 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 11:03:43.585  INFO 2704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 11:03:43.870  INFO 2704 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 11:03:43.903  INFO 2704 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 11:03:44.706  INFO 2704 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 11:03:44.714  INFO 2704 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:03:45.164  WARN 2704 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 11:03:45.513  WARN 2704 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 11:03:45.643  WARN 2704 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 11:03:45.716  INFO 2704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 11:03:45.736  INFO 2704 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 6.156 seconds (JVM running for 6.792)
-2022-12-02 11:04:16.670  INFO 2704 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 11:04:16.670  INFO 2704 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 11:04:16.672  INFO 2704 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-12-02 11:04:16.845  INFO 2704 --- [http-nio-8080-exec-2] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA:    
- ID ODONTÓLOGO:  
- ID PACIENTE:  .
-2022-12-02 11:05:01.583  INFO 2704 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:05:01.599  INFO 2704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-02 11:05:01.604  INFO 2704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-02 11:05:07.413  INFO 5256 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 5256 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 11:05:07.418  INFO 5256 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 11:05:08.269  INFO 5256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 11:05:08.377  INFO 5256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
-2022-12-02 11:05:09.357  INFO 5256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 11:05:09.373  INFO 5256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 11:05:09.373  INFO 5256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 11:05:09.529  INFO 5256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 11:05:09.529  INFO 5256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2035 ms
-2022-12-02 11:05:09.825  INFO 5256 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 11:05:09.938  INFO 5256 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 11:05:10.194  INFO 5256 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 11:05:10.306  INFO 5256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 11:05:10.607  INFO 5256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 11:05:10.642  INFO 5256 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 11:05:11.594  INFO 5256 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 11:05:11.604  INFO 5256 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:05:12.378  WARN 5256 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 11:05:12.766  WARN 5256 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 11:05:12.900  WARN 5256 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 11:05:12.963  INFO 5256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 11:05:12.978  INFO 5256 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 6.043 seconds (JVM running for 6.533)
-2022-12-02 11:05:24.555  INFO 5256 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 11:05:24.556  INFO 5256 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 11:05:24.557  INFO 5256 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-02 11:05:24.708  INFO 5256 --- [http-nio-8080-exec-2] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA:    
- ID ODONTÓLOGO:  
- ID PACIENTE:  .2022-12-0216:20:00com.example.odontologos.model.Odontologo@716a0be3com.example.odontologos.model.Paciente@384db3d
-2022-12-02 11:17:29.603  INFO 5256 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:17:29.605  INFO 5256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-02 11:17:29.608  INFO 5256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-02 11:17:38.377  INFO 13640 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 13640 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 11:17:38.380  INFO 13640 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 11:17:39.635  INFO 13640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 11:17:39.739  INFO 13640 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
-2022-12-02 11:17:40.782  INFO 13640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 11:17:40.803  INFO 13640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 11:17:40.804  INFO 13640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 11:17:41.012  INFO 13640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 11:17:41.013  INFO 13640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2537 ms
-2022-12-02 11:17:41.279  INFO 13640 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 11:17:41.367  INFO 13640 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 11:17:41.631  INFO 13640 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 11:17:41.760  INFO 13640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 11:17:42.153  INFO 13640 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 11:17:42.201  INFO 13640 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 11:17:43.078  INFO 13640 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 11:17:43.087  INFO 13640 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:17:43.806  WARN 13640 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 11:17:44.278  WARN 13640 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 11:17:44.468  WARN 13640 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 11:17:44.574  INFO 13640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 11:17:44.592  INFO 13640 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 6.806 seconds (JVM running for 7.535)
-2022-12-02 11:18:24.906  INFO 13640 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 11:18:24.906  INFO 13640 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 11:18:24.907  INFO 13640 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-02 11:18:25.073  INFO 13640 --- [http-nio-8080-exec-2] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA: 1996-01-04 03:34:00
- ID ODONTÓLOGO: com.example.odontologos.model.Odontologo@340681b5
- ID PACIENTE: com.example.odontologos.model.Paciente@68d8cb0e.
-2022-12-02 11:19:05.445  INFO 13640 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:19:05.448  INFO 13640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-02 11:19:05.452  INFO 13640 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-02 11:19:11.880  INFO 936 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 936 (D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\back end 1\TrabajoIntegrador\odontologos)
-2022-12-02 11:19:11.884  INFO 936 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-12-02 11:19:12.988  INFO 936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-02 11:19:13.081  INFO 936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 4 JPA repository interfaces.
-2022-12-02 11:19:13.898  INFO 936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-02 11:19:13.916  INFO 936 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-02 11:19:13.916  INFO 936 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2022-12-02 11:19:14.095  INFO 936 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-02 11:19:14.097  INFO 936 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2116 ms
-2022-12-02 11:19:14.533  INFO 936 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-02 11:19:14.706  INFO 936 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2022-12-02 11:19:14.904  INFO 936 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-12-02 11:19:15.020  INFO 936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-02 11:19:15.322  INFO 936 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-02 11:19:15.356  INFO 936 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-02 11:19:16.113  INFO 936 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-02 11:19:16.121  INFO 936 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:19:16.599  WARN 936 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-02 11:19:16.996  WARN 936 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-02 11:19:17.117  WARN 936 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
-2022-12-02 11:19:17.184  INFO 936 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-02 11:19:17.195  INFO 936 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 5.884 seconds (JVM running for 6.515)
-2022-12-02 11:19:31.808  INFO 936 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-02 11:19:31.808  INFO 936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-02 11:19:31.809  INFO 936 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-02 11:19:31.990 ERROR 936 --- [http-nio-8080-exec-1] c.e.o.repository.IDomicilioRepository    : El odontólogo o el paciente no existen y no se pudo crear el turno.
-2022-12-02 11:20:09.607  INFO 936 --- [http-nio-8080-exec-5] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
- FECHA Y HORA: 1996-01-04 03:34:00
- ID ODONTÓLOGO: 7
- ID PACIENTE: 17.
-2022-12-02 11:20:28.347  INFO 936 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-02 11:20:28.349  INFO 936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-02 11:20:28.351  INFO 936 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-08 08:46:17.930  INFO 8580 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 8580 (D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos)
+2022-12-08 08:46:17.939  INFO 8580 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-12-08 08:46:20.191  INFO 8580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-08 08:46:20.341  INFO 8580 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 5 JPA repository interfaces.
+2022-12-08 08:46:21.426  INFO 8580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-08 08:46:21.440  INFO 8580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-08 08:46:21.440  INFO 8580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-08 08:46:21.633  INFO 8580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-08 08:46:21.646  INFO 8580 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3581 ms
+2022-12-08 08:46:22.185  INFO 8580 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-08 08:46:22.266  INFO 8580 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-08 08:46:22.505  INFO 8580 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-08 08:46:22.662  INFO 8580 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-08 08:46:23.061  INFO 8580 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-08 08:46:23.101  INFO 8580 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-08 08:46:24.127  INFO 8580 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-08 08:46:24.135  INFO 8580 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 08:46:24.830  WARN 8580 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-08 08:46:25.057  INFO 8580 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6a013bdd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e0bba2f, org.springframework.security.web.context.SecurityContextPersistenceFilter@20a25f66, org.springframework.security.web.header.HeaderWriterFilter@7fce1069, org.springframework.security.web.authentication.logout.LogoutFilter@402676e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27575bcd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e7113f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41d53813, org.springframework.security.web.session.SessionManagementFilter@19de32cb, org.springframework.security.web.access.ExceptionTranslationFilter@4edde05c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6885f3f7]
+2022-12-08 08:46:25.597  WARN 8580 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-08 08:46:25.759  WARN 8580 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2022-12-08 08:46:25.859  INFO 8580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-08 08:46:25.872  INFO 8580 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 8.714 seconds (JVM running for 12.427)
+2022-12-08 08:47:19.434  INFO 8580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-08 08:47:19.435  INFO 8580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-08 08:47:19.436  INFO 8580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-08 08:47:19.561  INFO 8580 --- [http-nio-8080-exec-1] c.e.o.Controller.DomicilioController     : Se creó un nuevo domicilio
+2022-12-08 08:47:39.110  INFO 8580 --- [http-nio-8080-exec-3] c.e.o.Controller.DomicilioController     : Se creó un nuevo domicilio
+2022-12-08 08:48:04.760  INFO 8580 --- [http-nio-8080-exec-4] c.e.o.Controller.DomicilioController     : Se creó un nuevo domicilio
+2022-12-08 08:48:34.716  INFO 8580 --- [http-nio-8080-exec-5] c.e.o.Controller.DomicilioController     : Se creó un nuevo domicilio
+2022-12-08 08:48:58.549  INFO 8580 --- [http-nio-8080-exec-6] c.e.o.Controller.DomicilioController     : Se creó un nuevo domicilio
+2022-12-08 08:50:53.293  INFO 8580 --- [http-nio-8080-exec-2] c.e.o.Controller.PacienteController      : Se creó un nuevo paciente
+2022-12-08 08:52:36.154  INFO 8580 --- [http-nio-8080-exec-5] c.e.o.Controller.PacienteController      : Se creó un nuevo paciente
+2022-12-08 08:52:36.168 ERROR 8580 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.example.odontologos.model.Paciente.domicilio -> com.example.odontologos.model.Domicilio; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.example.odontologos.model.Paciente.domicilio -> com.example.odontologos.model.Domicilio] with root cause
+
+org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance before flushing : com.example.odontologos.model.Paciente.domicilio -> com.example.odontologos.model.Domicilio
+	at org.hibernate.engine.spi.CascadingActions$8.noCascade(CascadingActions.java:379) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:169) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:159) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:149) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:82) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.23.jar:5.3.23]
+	at jdk.proxy2/jdk.proxy2.$Proxy112.save(Unknown Source) ~[na:na]
+	at com.example.odontologos.service.PacienteService.addPaciente(PacienteService.java:20) ~[classes/:na]
+	at com.example.odontologos.Controller.PacienteController.addPaciente(PacienteController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.4.jar:5.7.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-12-08 08:53:30.867  INFO 8580 --- [http-nio-8080-exec-8] c.e.o.Controller.PacienteController      : Se creó un nuevo paciente
+2022-12-08 08:54:02.896  INFO 8580 --- [http-nio-8080-exec-2] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 08:54:17.157  INFO 8580 --- [http-nio-8080-exec-1] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 08:54:28.572  INFO 8580 --- [http-nio-8080-exec-3] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 08:57:34.193  INFO 8580 --- [http-nio-8080-exec-10] c.e.o.repository.IDomicilioRepository    : Turno registrado con éxito. 
+ FECHA Y HORA: 2022-10-11 12:45:00
+ ID ODONTÓLOGO: 4
+ ID PACIENTE: 1.
+2022-12-08 08:57:43.192  INFO 8580 --- [http-nio-8080-exec-2] c.e.o.repository.IDomicilioRepository    : Se listan los 1 turnos existentes.
+2022-12-08 09:14:07.507  INFO 8580 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 09:14:07.510  INFO 8580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-08 09:14:07.513  INFO 8580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-08 21:39:16.919  INFO 10708 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 10708 (D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos)
+2022-12-08 21:39:16.935  INFO 10708 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-12-08 21:39:18.558  INFO 10708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-08 21:39:18.690  INFO 10708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 5 JPA repository interfaces.
+2022-12-08 21:39:19.615  INFO 10708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-08 21:39:19.629  INFO 10708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-08 21:39:19.630  INFO 10708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-08 21:39:19.806  INFO 10708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-08 21:39:19.807  INFO 10708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2776 ms
+2022-12-08 21:39:20.143  INFO 10708 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-08 21:39:20.224  INFO 10708 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-08 21:39:20.454  INFO 10708 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-08 21:39:20.586  INFO 10708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-08 21:39:20.894  INFO 10708 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-08 21:39:20.934  INFO 10708 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-08 21:39:21.920  INFO 10708 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-08 21:39:21.931  INFO 10708 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:39:22.660  WARN 10708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-08 21:39:22.931  INFO 10708 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@326dbe25, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@647aa45c, org.springframework.security.web.context.SecurityContextPersistenceFilter@9a37591, org.springframework.security.web.header.HeaderWriterFilter@21ed4a51, org.springframework.security.web.authentication.logout.LogoutFilter@2c451c4a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4468c0ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ee3a2ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3922b297, org.springframework.security.web.session.SessionManagementFilter@7741507c, org.springframework.security.web.access.ExceptionTranslationFilter@488279d3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4be3de36]
+2022-12-08 21:39:23.332  WARN 10708 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-08 21:39:23.496  WARN 10708 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2022-12-08 21:39:23.616  INFO 10708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-08 21:39:23.645  INFO 10708 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 7.369 seconds (JVM running for 8.134)
+2022-12-08 21:39:41.848  INFO 10708 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-08 21:39:41.849  INFO 10708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-08 21:39:41.850  INFO 10708 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-08 21:39:47.783  INFO 10708 --- [http-nio-8080-exec-3] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 21:40:07.437  INFO 10708 --- [http-nio-8080-exec-4] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 21:40:21.654  INFO 10708 --- [http-nio-8080-exec-5] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 21:40:33.672  INFO 10708 --- [http-nio-8080-exec-7] c.e.o.Controller.OdontologoController    : Se encontró el odontólogo con id 2
+2022-12-08 21:41:09.578  INFO 10708 --- [http-nio-8080-exec-8] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 3
+2022-12-08 21:41:20.999  INFO 10708 --- [http-nio-8080-exec-9] c.e.o.Controller.OdontologoController    : Se encontró el odontólogo con id 3
+2022-12-08 21:44:37.369  INFO 10708 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:44:37.371  INFO 10708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-08 21:44:37.388  INFO 10708 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-08 21:44:41.770  INFO 11712 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 11712 (D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos)
+2022-12-08 21:44:41.773  INFO 11712 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-12-08 21:44:42.778  INFO 11712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-08 21:44:42.903  INFO 11712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
+2022-12-08 21:44:43.979  INFO 11712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-08 21:44:44.002  INFO 11712 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-08 21:44:44.002  INFO 11712 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-08 21:44:44.252  INFO 11712 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-08 21:44:44.252  INFO 11712 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2384 ms
+2022-12-08 21:44:44.620  INFO 11712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-08 21:44:44.671  INFO 11712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-08 21:44:44.845  INFO 11712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-08 21:44:44.946  INFO 11712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-08 21:44:45.176  INFO 11712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-08 21:44:45.207  INFO 11712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-08 21:44:46.215  INFO 11712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-08 21:44:46.223  INFO 11712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:44:46.841  WARN 11712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-08 21:44:47.079  INFO 11712 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10820978, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@278c67a7, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ee68eb2, org.springframework.security.web.header.HeaderWriterFilter@41cf4272, org.springframework.security.web.authentication.logout.LogoutFilter@7ade62a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27e3dc9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f87a7c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@758ebec4, org.springframework.security.web.session.SessionManagementFilter@1a4ae53d, org.springframework.security.web.access.ExceptionTranslationFilter@749c0669, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e09e367]
+2022-12-08 21:44:47.588  WARN 11712 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-08 21:44:47.761  WARN 11712 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2022-12-08 21:44:47.863  INFO 11712 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-08 21:44:47.882  INFO 11712 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 6.583 seconds (JVM running for 7.129)
+2022-12-08 21:45:22.382  INFO 11712 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-08 21:45:22.382  INFO 11712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-08 21:45:22.384  INFO 11712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-12-08 21:45:22.580 ERROR 11712 --- [http-nio-8080-exec-1] c.e.o.Controller.OdontologoController    : No se encontró ningún odontólogo con id 3
+2022-12-08 21:45:29.470 ERROR 11712 --- [http-nio-8080-exec-3] c.e.o.Controller.OdontologoController    : No se encontró ningún odontólogo con id 3
+2022-12-08 21:45:49.672  INFO 11712 --- [http-nio-8080-exec-5] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 21:46:07.375  INFO 11712 --- [http-nio-8080-exec-7] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 1
+2022-12-08 21:46:15.216  INFO 11712 --- [http-nio-8080-exec-8] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 1
+2022-12-08 21:46:25.142  INFO 11712 --- [http-nio-8080-exec-9] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 1
+2022-12-08 21:46:29.276  INFO 11712 --- [http-nio-8080-exec-10] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 1
+2022-12-08 21:47:32.196  INFO 11712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:47:32.203  INFO 11712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-08 21:47:32.206  INFO 11712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-08 21:48:15.114  INFO 8748 --- [main] c.e.odontologos.OdontologosApplication   : Starting OdontologosApplication using Java 18.0.1.1 on DESKTOP-NVKBR67 with PID 8748 (D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos\target\classes started by Agus in D:\backup\FaQ\DigitalHouse\backEnd1\TrabajoIntegrador\odontologos)
+2022-12-08 21:48:15.117  INFO 8748 --- [main] c.e.odontologos.OdontologosApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-12-08 21:48:16.054  INFO 8748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-08 21:48:16.160  INFO 8748 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+2022-12-08 21:48:17.069  INFO 8748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-08 21:48:17.109  INFO 8748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-08 21:48:17.109  INFO 8748 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-12-08 21:48:17.276  INFO 8748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-08 21:48:17.276  INFO 8748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2075 ms
+2022-12-08 21:48:17.586  INFO 8748 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-08 21:48:17.648  INFO 8748 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-12-08 21:48:17.826  INFO 8748 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-12-08 21:48:17.924  INFO 8748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-08 21:48:18.160  INFO 8748 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-08 21:48:18.192  INFO 8748 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-08 21:48:18.987  INFO 8748 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-08 21:48:18.995  INFO 8748 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:48:19.607  WARN 8748 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-08 21:48:19.776  INFO 8748 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c157abf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@472dbaf5, org.springframework.security.web.context.SecurityContextPersistenceFilter@682fe17b, org.springframework.security.web.header.HeaderWriterFilter@3fd6dfbc, org.springframework.security.web.authentication.logout.LogoutFilter@3bf40c74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13e0f380, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73ff7a54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25c4f621, org.springframework.security.web.session.SessionManagementFilter@4eace42b, org.springframework.security.web.access.ExceptionTranslationFilter@558aa1f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10820978]
+2022-12-08 21:48:20.150  WARN 8748 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-08 21:48:20.272  WARN 8748 --- [main] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.check-template-location=false)
+2022-12-08 21:48:20.345  INFO 8748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-08 21:48:20.362  INFO 8748 --- [main] c.e.odontologos.OdontologosApplication   : Started OdontologosApplication in 5.721 seconds (JVM running for 6.21)
+2022-12-08 21:48:30.928  INFO 8748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-08 21:48:30.929  INFO 8748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-08 21:48:30.941  INFO 8748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-08 21:48:34.103  INFO 8748 --- [http-nio-8080-exec-3] c.e.o.Controller.OdontologoController    : Se creó un nuevo odontólogo
+2022-12-08 21:48:37.260 ERROR 8748 --- [http-nio-8080-exec-4] c.e.o.Controller.OdontologoController    : No se encontró ningún odontólogo con id 3
+2022-12-08 21:48:40.720  INFO 8748 --- [http-nio-8080-exec-6] c.e.o.Controller.OdontologoController    : Se encontró el odontólogo con id 1
+2022-12-08 21:49:04.795  INFO 8748 --- [http-nio-8080-exec-7] c.e.o.Controller.OdontologoController    : Se actualizó el odontólogo con id 1
+2022-12-08 21:49:04.808  INFO 8748 --- [http-nio-8080-exec-7] c.e.o.service.OdontologoService          : Se actualizó el odontólogo con id 1
+2022-12-08 21:49:19.582  INFO 8748 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-08 21:49:19.587  INFO 8748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-08 21:49:19.591  INFO 8748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

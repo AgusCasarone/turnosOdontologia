@@ -662,3 +662,55 @@ Database is already closed (to disable automatic closing at VM shutdown, add ";D
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-12-05 19:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-05 19:27:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:25:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:36:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:42:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:46:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:47:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 17:49:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 20:31:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'USER' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'USER' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 20:36:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 20:42:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 20:47:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]
+2022-12-07 20:50:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"
+Data conversion error converting "'ROL_ADMIN' (USUARIO: ""ROL"" INTEGER)"; SQL statement:
+insert into usuario (id, email, name, password, rol, username) values (default, ?, ?, ?, ?, ?) [22018-214]

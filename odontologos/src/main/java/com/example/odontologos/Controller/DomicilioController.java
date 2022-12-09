@@ -3,6 +3,8 @@ package com.example.odontologos.Controller;
 import com.example.odontologos.dto.DomicilioDto;
 import com.example.odontologos.model.Domicilio;
 import com.example.odontologos.service.DomicilioService;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,11 +44,12 @@ public class DomicilioController {
     @PutMapping(value = "update/{id}")
     public ResponseEntity<Domicilio> updateDomicilio(@PathVariable Integer id, @RequestBody DomicilioDto domicilioDto) {
         if (domicilioService.findDomicilioById(id).isPresent()) {
+            excludeNullValues();
             LOGGER.info(String.format("Se actualizó el domicilio con id %s", id));
             domicilioDto.setId(id);
             return ResponseEntity.ok(domicilioService.addDomicilio(domicilioDto));
         } else {
-            LOGGER.error(String.format("No se encontró ningún odontólogo con el id %s", id));
+
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
@@ -65,6 +68,11 @@ public class DomicilioController {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Domicilio>> listDomicilios(){
         return ResponseEntity.ok(domicilioService.listDomiclios());
+    }
+
+    public void excludeNullValues() {
+        ObjectMapper jsonMapper = new ObjectMapper();
+        jsonMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
 }
